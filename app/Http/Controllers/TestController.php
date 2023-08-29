@@ -15,6 +15,7 @@ class TestController extends Controller
 
     public function test()
     {
+        return "test2";
         $response = $this->pokemonService->checkPokemonEvolution("bulbasaur" , 9);
         return $response;
     }
