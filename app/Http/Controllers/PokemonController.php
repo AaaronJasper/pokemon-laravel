@@ -82,7 +82,7 @@ class PokemonController extends BaseController
         ]);
         //回傳資料格式
         $pokemonData = new PokemonResource($pokemon);
-        return $this->res(201, $pokemonData, "created successfully");
+        return $this->res(201, $pokemonData, "Created successfully");
     }
 
     /**

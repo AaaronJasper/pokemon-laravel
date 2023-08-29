@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AbilityController;
+use App\Http\Controllers\NatureController;
 use App\Http\Controllers\PokemonController;
 use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
@@ -20,4 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('pokemon',PokemonController::class)->except("edit", "create");
+Route::resource("nature",NatureController::class)->only('update','store');
+Route::resource("ability",AbilityController::class)->only('update','store');
 Route::post('test',[TestController::class,'test']);
