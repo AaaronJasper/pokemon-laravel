@@ -12,4 +12,9 @@ class Nature extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function pokemon()
+    {
+        return $this->hasMany(Pokemon::class, 'nature_id', 'id');
+    }
 }

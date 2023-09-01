@@ -1,0 +1,47 @@
+input CreatePokemonInput {
+  name: String! @rules(apply: ["required", "min:1", "max:8"])
+  race: String! @rules(apply: ["required"])
+  level: Int! @rules(apply: ["required", "numeric", "min:1", "max:100"])
+  ability: String! @rules(apply: ["required", "exists:abilities,name"])
+  nature: String! @rules(apply: ["required", "exists:natures,name"])
+}
+
+input UpdatePokemonInput {
+  id: Int! @rules(apply: ["required"])
+  name: String @rules(apply: ["min:1", "max:8"])
+  level: Int @rules(apply: ["min:1", "max:100"])
+  ability: String @rules(apply: ["exists:abilities,name"])
+  nature: String @rules(apply: ["exists:natures,name"])
+}
+
+input DeletePokemonInput {
+  id: Int! @rules(apply: ["required"])
+}
+
+
+type Query {
+  PokemonsQuery(query:String): [Pokemon] 
+  PokemonQuery(id: ID @eq): Pokemon 
+}
+
+type Mutation {
+  PokemonCreate(input:CreatePokemonInput!): Pokemon
+  PokemonUpdate(input:UpdatePokemonInput!): Pokemon
+  PokemonDelete(input:DeletePokemonInput!): Pokemon
+}
+
+type Pokemon {
+    id: ID!
+    level: Int!
+    name: String!
+    race: String!
+    skill1: String
+    skill2: String
+    skill3: String
+    skill4: String
+    created_at: DateTime!
+    updated_at: DateTime!
+    #關聯
+    nature: Nature @belongsTo
+    ability: Ability @belongsTo
+}

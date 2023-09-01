@@ -12,4 +12,9 @@ class Ability extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function pokemon()
+    {
+        return $this->hasMany(Pokemon::class, 'ability_id', 'id');
+    }
 }

@@ -49,7 +49,7 @@ class PokemonController extends BaseController
             return $this->res(200, $pokemonData, "search successfully");
         } else {
             //無關鍵字回傳所有寶可夢
-            $pokemon = Pokemon::where('status', 1)->get();
+            $pokemon = Pokemon::where('status', true)->get();
             $pokemonData = new PokemonCollection($pokemon);
             return $this->res(200, $pokemonData, "search successfully");
         }

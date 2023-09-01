@@ -1,0 +1,58 @@
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+input CreateNatureInput {
+  name: String! @rules(apply: ["required", "min:1", "max:8", "unique:natures,name"])
+}
+input UpdateNatureInput {
+  id: Int! @rules(apply: ["required"])
+  name: String! @rules(apply: ["required", "min:1", "max:8", "unique:natures,name"])
+}
+
+input CreateAbilityInput {
+  name: String! @rules(apply: ["required", "min:1", "max:8", "unique:abilities,name"])
+}
+input UpdateAbilityInput {
+  id: Int! @rules(apply: ["required"])
+  name: String! @rules(apply: ["required", "min:1", "max:8", "unique:abilities,name"])
+}
+
+input LearnSkillInput{
+  id: Int! @rules(apply: ["required"])
+  skill1: String
+  skill2: String
+  skill3: String
+  skill4: String
+}
+
+extend type Mutation {
+  NatureCreate(input:CreateNatureInput!): Nature
+  NatureUpdate(input:UpdateNatureInput!): Nature
+  AbilityCreate(input:CreateAbilityInput!): Ability
+  AbilityUpdate(input:UpdateAbilityInput!): Ability
+  SkillLearn(input:LearnSkillInput!): Pokemon
+}
+
+extend type Query {
+  EnableSkills(id: ID @eq): [Skill]
+  Skills(id: ID @eq): [Skill]
+}
+
+type Nature {
+    id: ID!
+    name: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Ability {
+    id: ID!
+    name: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Skill {
+  name: String
+}
+#import pokemon.graphql

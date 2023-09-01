@@ -53,19 +53,15 @@ class SkillController extends BaseController
         //更新技能
         if (!empty($skill1) && in_array($skill1, $enableSkill)) {
             $pokemon->skill1 = $skill1;
-            $pokemon->save();
         }
         if (!empty($skill2) && in_array($skill2, $enableSkill)) {
             $pokemon->skill2 = $skill2;
-            $pokemon->save();
         }
         if (!empty($skill3) && in_array($skill3, $enableSkill)) {
             $pokemon->skill3 = $skill3;
-            $pokemon->save();
         }
         if (!empty($skill4) && in_array($skill4, $enableSkill)) {
             $pokemon->skill4 = $skill4;
-            $pokemon->save();
         }
         //確認技能是否相同
         $array = [];
@@ -86,6 +82,7 @@ class SkillController extends BaseController
             return $this->res(400, [], "Skills cannot be repeated");
         }
         //回傳值
+        $pokemon->save();
         $pokemonData = new PokemonResource($pokemon);
         return $this->res(201, $pokemonData, "Updated successfully");
     }
