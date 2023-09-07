@@ -1,0 +1,596 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/pokemon:
+    get:
+      summary: 查詢寶可夢
+      operationId: ''
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  code: 200
+                  data:
+                    data:
+                      -
+                        id: 5
+                        name: 百變怪
+                        level: 99
+                        race: ditto
+                        nature: 無聊聊
+                        ability: 惡臭
+                        skill1: transform
+                        skill2: null
+                        skill3: null
+                        skill4: null
+                        created_at: '2023-08-28 08:19:51'
+                        updated_at: '2023-09-05 07:55:34'
+                      -
+                        id: 7
+                        name: pepe
+                        level: 90
+                        race: venusaur
+                        nature: 天真
+                        ability: 惡臭
+                        skill1: grass-knot
+                        skill2: sunny-day
+                        skill3: nature-power
+                        skill4: cut
+                        created_at: '2023-08-29 03:42:19'
+                        updated_at: '2023-08-30 06:22:12'
+                      -
+                        id: 8
+                        name: pepe
+                        level: 99
+                        race: venusaur
+                        nature: 大膽
+                        ability: 惡臭
+                        skill1: null
+                        skill2: null
+                        skill3: null
+                        skill4: null
+                        created_at: '2023-08-29 03:52:25'
+                        updated_at: '2023-08-29 05:00:59'
+                      -
+                        id: 9
+                        name: pepe
+                        level: 66
+                        race: venusaur
+                        nature: 無聊聊
+                        ability: 三個字超級可悲
+                        skill1: cut
+                        skill2: null
+                        skill3: null
+                        skill4: null
+                        created_at: '2023-08-29 04:22:09'
+                        updated_at: '2023-09-01 08:09:16'
+                      -
+                        id: 11
+                        name: skr
+                        level: 66
+                        race: venusaur
+                        nature: 無聊聊
+                        ability: 三個字超級可悲
+                        skill1: nature-power
+                        skill2: sunny-day
+                        skill3: growl
+                        skill4: cut
+                        created_at: '2023-09-01 03:49:17'
+                        updated_at: '2023-09-01 07:21:21'
+                  message: 'search successfully'
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    properties:
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 5
+                            name: 百變怪
+                            level: 99
+                            race: ditto
+                            nature: 無聊聊
+                            ability: 惡臭
+                            skill1: transform
+                            skill2: null
+                            skill3: null
+                            skill4: null
+                            created_at: '2023-08-28 08:19:51'
+                            updated_at: '2023-09-05 07:55:34'
+                          -
+                            id: 7
+                            name: pepe
+                            level: 90
+                            race: venusaur
+                            nature: 天真
+                            ability: 惡臭
+                            skill1: grass-knot
+                            skill2: sunny-day
+                            skill3: nature-power
+                            skill4: cut
+                            created_at: '2023-08-29 03:42:19'
+                            updated_at: '2023-08-30 06:22:12'
+                          -
+                            id: 8
+                            name: pepe
+                            level: 99
+                            race: venusaur
+                            nature: 大膽
+                            ability: 惡臭
+                            skill1: null
+                            skill2: null
+                            skill3: null
+                            skill4: null
+                            created_at: '2023-08-29 03:52:25'
+                            updated_at: '2023-08-29 05:00:59'
+                          -
+                            id: 9
+                            name: pepe
+                            level: 66
+                            race: venusaur
+                            nature: 無聊聊
+                            ability: 三個字超級可悲
+                            skill1: cut
+                            skill2: null
+                            skill3: null
+                            skill4: null
+                            created_at: '2023-08-29 04:22:09'
+                            updated_at: '2023-09-01 08:09:16'
+                          -
+                            id: 11
+                            name: skr
+                            level: 66
+                            race: venusaur
+                            nature: 無聊聊
+                            ability: 三個字超級可悲
+                            skill1: nature-power
+                            skill2: sunny-day
+                            skill3: growl
+                            skill4: cut
+                            created_at: '2023-09-01 03:49:17'
+                            updated_at: '2023-09-01 07:21:21'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 5
+                            name:
+                              type: string
+                              example: 百變怪
+                            level:
+                              type: integer
+                              example: 99
+                            race:
+                              type: string
+                              example: ditto
+                            nature:
+                              type: string
+                              example: 無聊聊
+                            ability:
+                              type: string
+                              example: 惡臭
+                            skill1:
+                              type: string
+                              example: transform
+                            skill2:
+                              type: string
+                              example: null
+                            skill3:
+                              type: string
+                              example: null
+                            skill4:
+                              type: string
+                              example: null
+                            created_at:
+                              type: string
+                              example: '2023-08-28 08:19:51'
+                            updated_at:
+                              type: string
+                              example: '2023-09-05 07:55:34'
+                  message:
+                    type: string
+                    example: 'search successfully'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 新增寶可夢
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 1 character. Must not be greater than 8 characters.'
+                  example: x
+                level:
+                  type: number
+                  description: 'Must be at least 1. Must not be greater than 100.'
+                  example: 24
+                ability:
+                  type: string
+                  description: ''
+                  example: ut
+                nature:
+                  type: string
+                  description: ''
+                  example: nihil
+              required:
+                - name
+                - level
+                - ability
+                - nature
+      security: []
+  '/api/pokemon/{id}':
+    get:
+      summary: 查詢單一寶可夢
+      operationId: ''
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  code: 200
+                  data:
+                    id: 5
+                    name: 百變怪
+                    level: 99
+                    race: ditto
+                    nature: 無聊聊
+                    ability: 惡臭
+                    skill1: transform
+                    skill2: null
+                    skill3: null
+                    skill4: null
+                    created_at: '2023-08-28 08:19:51'
+                    updated_at: '2023-09-05 07:55:34'
+                  message: 'search successfully'
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      name:
+                        type: string
+                        example: 百變怪
+                      level:
+                        type: integer
+                        example: 99
+                      race:
+                        type: string
+                        example: ditto
+                      nature:
+                        type: string
+                        example: 無聊聊
+                      ability:
+                        type: string
+                        example: 惡臭
+                      skill1:
+                        type: string
+                        example: transform
+                      skill2:
+                        type: string
+                        example: null
+                      skill3:
+                        type: string
+                        example: null
+                      skill4:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2023-08-28 08:19:51'
+                      updated_at:
+                        type: string
+                        example: '2023-09-05 07:55:34'
+                  message:
+                    type: string
+                    example: 'search successfully'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 更新寶可夢
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 1 character. Must not be greater than 8 characters.'
+                  example: ikxeipq
+                level:
+                  type: number
+                  description: 'Must be at least 1. Must not be greater than 100.'
+                  example: 8
+                ability:
+                  type: string
+                  description: ''
+                  example: null
+                nature:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+    delete:
+      summary: 刪除寶可夢
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the pokemon.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+  /api/nature:
+    post:
+      summary: 新增性格
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nature:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+                  example: ozyjzr
+              required:
+                - nature
+      security: []
+  '/api/nature/{id}':
+    put:
+      summary: 修改性格
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nature:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+                  example: pgdn
+              required:
+                - nature
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the nature.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/ability:
+    post:
+      summary: 新增特性
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ability:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+                  example: xu
+              required:
+                - ability
+      security: []
+  '/api/ability/{id}':
+    put:
+      summary: 修改特性
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ability:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+                  example: knggt
+              required:
+                - ability
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the ability.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/pokemon/{id}/enableSkill':
+    get:
+      summary: 顯示可學習技能
+      operationId: ''
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  skill1: transform
+                properties:
+                  skill1:
+                    type: string
+                    example: transform
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the pokemon.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+  '/api/pokemon/{id}/skill':
+    get:
+      summary: 顯示已學習技能
+      operationId: ''
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  code: 200
+                  data:
+                    skill1: transform
+                    skill2: null
+                    skill3: null
+                    skill4: null
+                  message: 'Search successful'
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    properties:
+                      skill1:
+                        type: string
+                        example: transform
+                      skill2:
+                        type: string
+                        example: null
+                      skill3:
+                        type: string
+                        example: null
+                      skill4:
+                        type: string
+                        example: null
+                  message:
+                    type: string
+                    example: 'Search successful'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 學習技能
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the pokemon.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+  /api/test:
+    post:
+      summary: ''
+      operationId: postApiTest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''

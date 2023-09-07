@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//});
 
 Route::resource('pokemon', PokemonController::class)->except("edit", "create");
 Route::resource("nature", NatureController::class)->only('update', 'store');

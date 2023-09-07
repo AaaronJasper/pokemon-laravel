@@ -1,0 +1,586 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "26e1af4a-68d1-4d08-94df-84ccb981c3ae",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u67e5\u8a62\u5bf6\u53ef\u5922",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"code\":200,\"data\":{\"data\":[{\"id\":5,\"name\":\"\\u767e\\u8b8a\\u602a\",\"level\":99,\"race\":\"ditto\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":\"transform\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-28 08:19:51\",\"updated_at\":\"2023-09-05 07:55:34\"},{\"id\":7,\"name\":\"pepe\",\"level\":90,\"race\":\"venusaur\",\"nature\":\"\\u5929\\u771f\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":\"grass-knot\",\"skill2\":\"sunny-day\",\"skill3\":\"nature-power\",\"skill4\":\"cut\",\"created_at\":\"2023-08-29 03:42:19\",\"updated_at\":\"2023-08-30 06:22:12\"},{\"id\":8,\"name\":\"pepe\",\"level\":99,\"race\":\"venusaur\",\"nature\":\"\\u5927\\u81bd\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-29 03:52:25\",\"updated_at\":\"2023-08-29 05:00:59\"},{\"id\":9,\"name\":\"pepe\",\"level\":66,\"race\":\"venusaur\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u4e09\\u500b\\u5b57\\u8d85\\u7d1a\\u53ef\\u60b2\",\"skill1\":\"cut\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-29 04:22:09\",\"updated_at\":\"2023-09-01 08:09:16\"},{\"id\":11,\"name\":\"skr\",\"level\":66,\"race\":\"venusaur\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u4e09\\u500b\\u5b57\\u8d85\\u7d1a\\u53ef\\u60b2\",\"skill1\":\"nature-power\",\"skill2\":\"sunny-day\",\"skill3\":\"growl\",\"skill4\":\"cut\",\"created_at\":\"2023-09-01 03:49:17\",\"updated_at\":\"2023-09-01 07:21:21\"}]},\"message\":\"search successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u65b0\u589e\u5bf6\u53ef\u5922",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"x\",\"level\":24,\"ability\":\"ut\",\"nature\":\"nihil\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u67e5\u8a62\u55ae\u4e00\u5bf6\u53ef\u5922",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"code\":200,\"data\":{\"id\":5,\"name\":\"\\u767e\\u8b8a\\u602a\",\"level\":99,\"race\":\"ditto\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":\"transform\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-28 08:19:51\",\"updated_at\":\"2023-09-05 07:55:34\"},\"message\":\"search successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u66f4\u65b0\u5bf6\u53ef\u5922",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"ikxeipq\",\"level\":8}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u522a\u9664\u5bf6\u53ef\u5922",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u65b0\u589e\u6027\u683c",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/nature",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/nature"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nature\":\"ozyjzr\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u4fee\u6539\u6027\u683c",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/nature\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/nature\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the nature."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nature\":\"pgdn\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u65b0\u589e\u7279\u6027",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ability",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/ability"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"ability\":\"xu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u4fee\u6539\u7279\u6027",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ability\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/ability\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the ability."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"ability\":\"knggt\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u986f\u793a\u53ef\u5b78\u7fd2\u6280\u80fd",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id\/enableSkill",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/enableSkill",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"skill1\":\"transform\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u986f\u793a\u5df2\u5b78\u7fd2\u6280\u80fd",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id\/skill",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/skill",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"code\":200,\"data\":{\"skill1\":\"transform\",\"skill2\":null,\"skill3\":null,\"skill4\":null},\"message\":\"Search successful\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u5b78\u7fd2\u6280\u80fd",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id\/skill",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/skill",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/test",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/test",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/test"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

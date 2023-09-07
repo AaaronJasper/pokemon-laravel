@@ -12,7 +12,7 @@ class AbilityController extends BaseController
 {
     
     /**
-     * Store a newly created resource in storage.
+     * 新增特性
      */
     public function store(AbilityRequest $request)
     {
@@ -24,7 +24,7 @@ class AbilityController extends BaseController
     }
 
     /**
-     * Update the specified resource in storage.
+     * 修改特性
      */
     public function update(AbilityRequest $request, string $id)
     {

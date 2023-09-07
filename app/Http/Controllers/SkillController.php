@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Http;
 
 class SkillController extends BaseController
 {
-    //顯示可學習技能
+    /**
+     * 顯示可學習技能
+     */
     public function index(string $id)
     {
         $pokemon = Pokemon::find($id);
@@ -28,7 +30,9 @@ class SkillController extends BaseController
         return $allSkills;
     }
 
-    //顯示已學習技能
+    /**
+     * 顯示已學習技能
+     */
     public function show(string $id)
     {
         $pokemon = Pokemon::find($id);
@@ -40,7 +44,9 @@ class SkillController extends BaseController
         return $this->res(200, $pokemonSkill, "Search successful");
     }
 
-    //學習技能
+    /**
+     * 學習技能
+     */
     public function learn(Request $request, string $id)
     {
         $pokemon = Pokemon::find($id);
