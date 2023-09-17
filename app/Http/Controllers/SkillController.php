@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SkillRequest;
 use App\Http\Resources\PokemonResource;
 use App\Models\Pokemon;
 use Illuminate\Http\Request;
@@ -47,7 +48,7 @@ class SkillController extends BaseController
     /**
      * 學習技能
      */
-    public function learn(Request $request, string $id)
+    public function learn(SkillRequest $request, string $id)
     {
         $pokemon = Pokemon::find($id);
         $skill1 = $request->skill1;
