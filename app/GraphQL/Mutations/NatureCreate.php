@@ -7,7 +7,7 @@ use App\Models\Nature;
 final  class NatureCreate
 {
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         $name = $args["input"]["name"];
         $newNature = Nature::create([

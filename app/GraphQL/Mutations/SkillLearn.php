@@ -14,7 +14,7 @@ final  class SkillLearn
         $this->skillController = $skillController;
     }
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         //取得寶可夢
         $id=$args["input"]["id"];

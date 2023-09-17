@@ -7,7 +7,7 @@ use App\Models\Ability;
 final  class AbilityUpdate
 {
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         $ability = $args["input"]["name"];
         $id = $args["input"]["id"];

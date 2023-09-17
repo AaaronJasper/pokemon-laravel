@@ -7,7 +7,7 @@ use App\Models\Pokemon;
 final  class PokemonQuery
 {
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         $id=$args["id"];
         $pokemon = Pokemon::find($id);

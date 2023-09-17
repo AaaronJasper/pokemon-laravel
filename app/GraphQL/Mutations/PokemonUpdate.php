@@ -16,7 +16,7 @@ final  class PokemonUpdate
         $this->pokemonService = $pokemonService;
     }
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         $id = $args["input"]["id"];
         //取得寶可夢

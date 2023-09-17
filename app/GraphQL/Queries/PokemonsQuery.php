@@ -11,7 +11,7 @@ use App\Models\Pokemon;
 final  class PokemonsQuery
 {
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         $query = $args["query"];
 

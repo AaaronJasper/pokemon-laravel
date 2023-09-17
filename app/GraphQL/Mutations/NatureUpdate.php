@@ -9,7 +9,7 @@ use App\Models\Nature;
 final  class NatureUpdate
 {
     /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke($_, array $args)
     {
         $nature = $args["input"]["name"];
         $id = $args["input"]["id"];
