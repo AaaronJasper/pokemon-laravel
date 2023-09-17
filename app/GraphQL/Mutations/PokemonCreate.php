@@ -9,7 +9,7 @@ use App\Models\Nature;
 use App\Models\Pokemon;
 use App\Services\PokemonService;
 
-final readonly class PokemonCreate
+final  class PokemonCreate
 {
     private PokemonService $pokemonService;
 

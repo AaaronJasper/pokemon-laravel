@@ -5,7 +5,7 @@ namespace App\GraphQL\Queries;
 use App\Models\Pokemon;
 use Illuminate\Support\Facades\Http;
 
-final readonly class EnableSkills
+final class EnableSkills
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)

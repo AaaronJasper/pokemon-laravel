@@ -6,7 +6,7 @@ namespace App\GraphQL\Mutations;
 
 use App\Models\Nature;
 
-final readonly class NatureUpdate
+final  class NatureUpdate
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)

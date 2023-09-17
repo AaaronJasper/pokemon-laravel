@@ -4,7 +4,7 @@ namespace App\GraphQL\Mutations;
 
 use App\Models\Nature;
 
-final readonly class NatureCreate
+final  class NatureCreate
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)

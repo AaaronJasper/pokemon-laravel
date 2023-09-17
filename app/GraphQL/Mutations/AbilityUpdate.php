@@ -4,7 +4,7 @@ namespace App\GraphQL\Mutations;
 
 use App\Models\Ability;
 
-final readonly class AbilityUpdate
+final  class AbilityUpdate
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)

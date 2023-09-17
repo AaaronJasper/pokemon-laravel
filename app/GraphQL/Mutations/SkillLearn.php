@@ -5,7 +5,7 @@ namespace App\GraphQL\Mutations;
 use App\Http\Controllers\SkillController;
 use App\Models\Pokemon;
 
-final readonly class SkillLearn
+final  class SkillLearn
 {
     private SkillController $skillController;
 

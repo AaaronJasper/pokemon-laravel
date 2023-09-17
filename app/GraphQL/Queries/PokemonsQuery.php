@@ -8,7 +8,7 @@ use App\Http\Resources\PokemonCollection;
 use App\Http\Resources\PokemonResource;
 use App\Models\Pokemon;
 
-final readonly class PokemonsQuery
+final  class PokemonsQuery
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)

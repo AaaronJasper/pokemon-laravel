@@ -4,7 +4,7 @@ namespace App\GraphQL\Mutations;
 
 use App\Models\Pokemon;
 
-final readonly class PokemonDelete
+final  class PokemonDelete
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)

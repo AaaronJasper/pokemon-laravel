@@ -7,7 +7,7 @@ use App\Models\Nature;
 use App\Models\Pokemon;
 use App\Services\PokemonService;
 
-final readonly class PokemonUpdate
+final  class PokemonUpdate
 {
     private PokemonService $pokemonService;
 

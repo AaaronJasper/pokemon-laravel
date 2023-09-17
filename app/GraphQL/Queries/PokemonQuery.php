@@ -4,7 +4,7 @@ namespace App\GraphQL\Queries;
 
 use App\Models\Pokemon;
 
-final readonly class PokemonQuery
+final  class PokemonQuery
 {
     /** @param  array{}  $args */
     public function __invoke(null $_, array $args)
