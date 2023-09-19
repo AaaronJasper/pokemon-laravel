@@ -92,12 +92,12 @@ class PokemonController extends BaseController
     {
         //查詢id
         $pokemon = Pokemon::find($id);
-        if ($pokemon->status == false) {
+        if ($pokemon == null or $pokemon->status == false) {
             return $this->res(404, [], "Pokemon does not exit");
         }
         //返回資料格式
         $pokemonData = new PokemonResource($pokemon);
-        return $pokemon == null ? $this->res(404, $pokemonData, "Pokemon does not exit") : $this->res(200, $pokemonData, "search successfully");
+        return $this->res(200, $pokemonData, "search successfully");
     }
 
     /**
