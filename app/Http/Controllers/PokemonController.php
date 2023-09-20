@@ -120,6 +120,24 @@ class PokemonController extends BaseController
 
     /**
      * 更新寶可夢
+     * @response{
+     * "code": 201,
+     * "data": {
+     *     "id": 5,
+     *     "name": "pepe99",
+     *     "level": "11",
+     *     "race": "ditto",
+     *     "nature": "天真",
+     *     "ability": "惡臭",
+     *     "skill1": null,
+     *     "skill2": null,
+     *     "skill3": null,
+     *     "skill4": null,
+     *     "created_at": "2023-09-20 09:24:18",
+     *     "updated_at": "2023-09-20 09:24:18"
+     * },
+     * "message": "Update completed"
+     * }
      */
     public function update(PokemonUpdateRequest $request, string $id)
     {
@@ -159,7 +177,11 @@ class PokemonController extends BaseController
     }
 
     /**
-     * 刪除寶可夢
+     * 刪除寶可夢{
+     * "code": 200,
+     * "data": [],
+     * "message": "successfully deleted"
+     * }
      */
     public function destroy(string $id)
     {
