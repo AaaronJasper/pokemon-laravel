@@ -57,6 +57,24 @@ class PokemonController extends BaseController
 
     /**
      *新增寶可夢
+     * @response{
+     * "code": 201,
+     * "data": {
+     *     "id": 5,
+     *     "name": "pepe99",
+     *     "level": "1",
+     *     "race": "ditto",
+     *     "nature": "天真",
+     *     "ability": "惡臭",
+     *     "skill1": null,
+     *     "skill2": null,
+     *     "skill3": null,
+     *     "skill4": null,
+     *     "created_at": "2023-09-20 09:24:18",
+     *     "updated_at": "2023-09-20 09:24:18"
+     * },
+     * "message": "Created successfully"
+     * }
      */
     public function store(PokemonReuqest $request)
     {
