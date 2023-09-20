@@ -47,6 +47,24 @@ class SkillController extends BaseController
 
     /**
      * 學習技能
+     * @response{
+     * "code": 201,
+     * "data": {
+     *     "id": 2,
+     *     "name": "pepe2",
+     *     "level": 6,
+     *     "race": "ditto",
+     *     "nature": "樂天",
+     *     "ability": "正電",
+     *     "skill1": "transform",
+     *     "skill2": null,
+     *     "skill3": null,
+     *     "skill4": null,
+     *     "created_at": "2023-09-17 11:06:10",
+     *     "updated_at": "2023-09-17 11:15:02"
+     * },
+     * "message": "Updated successfully"
+     * }
      */
     public function learn(SkillRequest $request, string $id)
     {
