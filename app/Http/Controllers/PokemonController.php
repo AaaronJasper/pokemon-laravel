@@ -177,7 +177,8 @@ class PokemonController extends BaseController
     }
 
     /**
-     * 刪除寶可夢{
+     * 刪除寶可夢
+     * @response{
      * "code": 200,
      * "data": [],
      * "message": "successfully deleted"
