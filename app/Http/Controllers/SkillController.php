@@ -24,8 +24,7 @@ class SkillController extends BaseController
         //取得可學習技能
         $allSkills = [];
         foreach ($data['moves'] as $i => $move) {
-            $key = 'skill' . ($i + 1);
-            $allSkills[$key] = $move['move']['name'];
+            $allSkills[] = $move['move']['name'];
         }
         //回傳技能鍵與值
         return $allSkills;
