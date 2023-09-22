@@ -50,6 +50,9 @@ class AbilityController extends BaseController
     {
         $ability= $request->ability;
         $newAbility = Ability::find($id);
+        if($newAbility == null){
+            return $this->res(404, [], "Ability not exist");
+        }
         $newAbility->name=$ability;
         $newAbility->save();
         return $this->res(200, $newAbility, "Updated successfully");

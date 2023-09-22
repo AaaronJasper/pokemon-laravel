@@ -50,6 +50,9 @@ class NatureController extends BaseController
     {
         $nature = $request->nature;
         $newNature = Nature::find($id);
+        if($newNature == null){
+            return $this->res(404, [], "Nature not exist");
+        }
         $newNature->name=$nature;
         $newNature->save();
         return $this->res(200, $newNature, "Updated successfully");

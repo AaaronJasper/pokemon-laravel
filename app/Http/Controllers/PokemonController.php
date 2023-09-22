@@ -143,7 +143,7 @@ class PokemonController extends BaseController
     {
         //取得寶可夢
         $pokemon = Pokemon::find($id);
-        if ($pokemon->status == false) {
+        if ($pokemon == null || $pokemon->status == false ) {
             return $this->res(404, [], "Pokemon does not exit");
         }
         $name = $request->input('name');

@@ -16,6 +16,9 @@ class SkillController extends BaseController
     public function index(string $id)
     {
         $pokemon = Pokemon::find($id);
+        if($pokemon == null || $pokemon->status == false){
+            return $this->res(404, [], "Pokemon does not exit");
+        }
         $pokemonRace = $pokemon->race;
         //取得可學習技能
         $url = 'https://pokeapi.co/api/v2/pokemon/' . $pokemonRace;
@@ -36,6 +39,9 @@ class SkillController extends BaseController
     public function show(string $id)
     {
         $pokemon = Pokemon::find($id);
+        if ($pokemon == null || $pokemon->status == false ) {
+            return $this->res(404, [], "Pokemon does not exit");
+        }
         $pokemonSkill = [];
         $pokemonSkill['skill1'] = $pokemon->skill1;
         $pokemonSkill['skill2'] = $pokemon->skill2;
@@ -68,6 +74,9 @@ class SkillController extends BaseController
     public function learn(SkillRequest $request, string $id)
     {
         $pokemon = Pokemon::find($id);
+        if ($pokemon == null || $pokemon->status == false ) {
+            return $this->res(404, [], "Pokemon does not exit");
+        }
         $skill1 = $request->skill1;
         $skill2 = $request->skill2;
         $skill3 = $request->skill3;
@@ -78,14 +87,26 @@ class SkillController extends BaseController
         if (!empty($skill1) && in_array($skill1, $enableSkill)) {
             $pokemon->skill1 = $skill1;
         }
+        if (!empty($skill1) && !in_array($skill1, $enableSkill)) {
+            return $this->res(400, [], "Skill cannot be learned");
+        }
         if (!empty($skill2) && in_array($skill2, $enableSkill)) {
             $pokemon->skill2 = $skill2;
+        }
+        if (!empty($skill2) && !in_array($skill2, $enableSkill)) {
+            return $this->res(400, [], "Skill cannot be learned");
         }
         if (!empty($skill3) && in_array($skill3, $enableSkill)) {
             $pokemon->skill3 = $skill3;
         }
+        if (!empty($skill3) && !in_array($skill3, $enableSkill)) {
+            return $this->res(400, [], "Skill cannot be learned");
+        }
         if (!empty($skill4) && in_array($skill4, $enableSkill)) {
             $pokemon->skill4 = $skill4;
+        }
+        if (!empty($skill4) && !in_array($skill4, $enableSkill)) {
+            return $this->res(400, [], "Skill cannot be learned");
         }
         //確認技能是否相同
         $array = [];
