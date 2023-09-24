@@ -36,6 +36,10 @@ Route::post("user/register", [UserController::class, 'register']);
 Route::post("user/login", [UserController::class, 'login']);
 //驗證信箱
 Route::get("/verify/{token}", [UserController::class, "verify"])->name("verify");
+//寄送忘記密碼郵件
+Route::post('/forget_password', [UserController::class, "forget_password"]);
+//重設密碼
+Route::post("/reset_password/{token}", [UserController::class, "reset_password"])->name("reset_password");
 //需登入路由
 Route::middleware('auth:sanctum')->group(function () {
     //用戶登出

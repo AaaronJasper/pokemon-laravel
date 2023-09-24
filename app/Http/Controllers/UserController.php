@@ -11,6 +11,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
+use App\Mail\ForgetPasswordMail;
 
 class UserController extends BaseController
 {
@@ -88,5 +91,48 @@ class UserController extends BaseController
         DB::table("register_token")->where("token", $token)->delete();
         
         return $this->res(200, [], "Verify success");
+    }
+    //忘記密碼
+    public function forget_password(Request $request){
+        //驗證email
+        $request->validate([
+            'email' => 'required|email|exists:users'
+        ]);
+        //使用輔助函數生成token
+        $token = Str::random(64);
+        //寫入資料庫
+        DB::table("password_reset_tokens")->updateOrInsert(
+            ['email' => $request->email],
+            [
+                "token" => $token,
+                "created_at" => Carbon::now()
+            ]
+        );
+        //寄送email
+        Mail::to($request->email)->send(new ForgetPasswordMail($token));
+        return $this->res(200, [], "Email send successfully");
+    }
+    //重設密碼
+    public function reset_password(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users',
+            'password' => 'required|min:4|max:16|confirmed',
+            'password_confirmation' => 'required',
+            'token' => 'required'
+        ]);
+        //確認是否有此帳號及token(原本在前端hidden傳入token)
+        $updateUser = DB::table("password_reset_tokens")->where([
+            "email" => $request->email,
+            "token" => $request->token,
+        ])->first();
+        if (!$updateUser) {
+            return $this->res(401, [], "Login failed");
+        }
+        //更新用戶數據
+        User::where('email', $request->email)->update(["password" => password_hash($request->input("password"), PASSWORD_DEFAULT)]);
+        //刪除忘記密碼中的token
+        DB::table("password_reset_tokens")->where("email", $request->email)->delete();
+        return $this->res(200, [], "Update password success");
     }
 }
