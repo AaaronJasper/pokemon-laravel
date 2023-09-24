@@ -30,4 +30,4 @@ Route::get("pokemon/{id}/enableSkill", [SkillController::class, 'index']);
 Route::get("pokemon/{id}/skill", [SkillController::class, 'show']);
 Route::post("pokemon/{id}/skill", [SkillController::class, 'learn']);
 //測試
-Route::post('test', [TestController::class, 'test']);
+Route::get('test', [TestController::class, 'test']);
