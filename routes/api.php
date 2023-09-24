@@ -47,6 +47,13 @@ Route::middleware('auth:sanctum')->group(function () {
     //再次發送驗證
     Route::post('/send_verify', [UserController::class, "send_verify"]);
 });
+//google登入(需用web中間件才能讓套件產生作用)
+//也可以直接加在web.php
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/auth/google', [\App\Http\Controllers\SocialiteController::class, 'googleLogin'])->name('/auth/google');
+    Route::get('/auth/google/callback', [\App\Http\Controllers\SocialiteController::class, 'googleLoginCallback'])->name('/auth/google/callback');
+    Route::get('/auth/google/logout', [\App\Http\Controllers\SocialiteController::class, 'googleLogout'])->name('/auth/google/logout');
+});
 
 //測試
 Route::get('test', [TestController::class, 'test']);
