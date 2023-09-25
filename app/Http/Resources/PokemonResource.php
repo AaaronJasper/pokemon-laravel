@@ -23,6 +23,7 @@ class PokemonResource extends JsonResource
             "race" => $this->race,
             "nature" => $this->nature->name,
             "ability" => $this->ability->name,
+            "user" => $this->user->name,
             "skill1" => $this->skill1,
             "skill2" => $this->skill2,
             "skill3" => $this->skill3,

@@ -18,7 +18,8 @@ class Pokemon extends Model
         'skill1_id',
         'skill2_id',
         'skill3_id',
-        'skill4_id'
+        'skill4_id',
+        'user_id',
     ];
 
     public function nature()
@@ -29,4 +30,9 @@ class Pokemon extends Model
     {
         return $this->belongsTo(Ability::class, 'ability_id', 'id');
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
 }

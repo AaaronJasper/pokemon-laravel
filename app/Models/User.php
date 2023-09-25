@@ -18,6 +18,10 @@ class User extends Authenticatable
     use Notifiable;
     //use TwoFactorAuthenticatable;
 
+    public function pokemon()
+    {
+        return $this->hasMany(Pokemon::class, 'user_id', 'id');
+    }
     /**
      * The attributes that are mass assignable.
      *

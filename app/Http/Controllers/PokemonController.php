@@ -13,6 +13,7 @@ use App\Services\PokemonService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class PokemonController extends BaseController
@@ -81,6 +82,8 @@ class PokemonController extends BaseController
     {
         //取得寶可夢種族
         $race = $request->race;
+        //取得登入ID
+        $id = Auth::id();
         //確認寶可夢種族
         $data = $this->pokemonService->checkPokemonRace($race);
         if (empty($data)) {
@@ -97,7 +100,8 @@ class PokemonController extends BaseController
             "level" => $level,
             "race" => $race,
             "nature_id" => $nature,
-            "ability_id" => $ability
+            "ability_id" => $ability,
+            "user_id" => $id
         ]);
         //回傳資料格式
         $pokemonData = new PokemonResource($pokemon);
@@ -144,6 +148,13 @@ class PokemonController extends BaseController
     {
         //取得寶可夢
         $pokemon = Pokemon::find($id);
+        //取得登入ID
+        $id = Auth::id();
+        //判斷是否是使用者
+        if ($pokemon->user_id != $id){
+            return $this->res(403, [], "Not the pokemon's user");
+        }
+        //確認是否有寶可夢
         if ($pokemon == null || $pokemon->status == false ) {
             return $this->res(404, [], "Pokemon does not exit");
         }
@@ -189,6 +200,13 @@ class PokemonController extends BaseController
     {
         //查詢id
         $pokemon = Pokemon::find($id);
+        //取得登入ID
+        $id = Auth::id();
+        //判斷是否是使用者
+        if ($pokemon->user_id != $id){
+            return $this->res(403, [], "Not the pokemon's user");
+        }
+        //確認是否有寶可夢
         if ($pokemon == null) {
             return $this->res(404, [], "Pokemon does not exit");
         }

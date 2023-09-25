@@ -6,6 +6,7 @@ use App\Http\Requests\SkillRequest;
 use App\Http\Resources\PokemonResource;
 use App\Models\Pokemon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class SkillController extends BaseController
@@ -16,8 +17,14 @@ class SkillController extends BaseController
     public function index(string $id)
     {
         $pokemon = Pokemon::find($id);
-        if($pokemon == null || $pokemon->status == false){
+        if ($pokemon == null || $pokemon->status == false) {
             return $this->res(404, [], "Pokemon does not exit");
+        }
+        //取得登入ID
+        $userid = Auth::id();
+        //判斷是否是使用者
+        if ($pokemon->user_id != $userid) {
+            return $this->res(403, [], "Not the pokemon's user");
         }
         $pokemonRace = $pokemon->race;
         //取得可學習技能
@@ -39,8 +46,14 @@ class SkillController extends BaseController
     public function show(string $id)
     {
         $pokemon = Pokemon::find($id);
-        if ($pokemon == null || $pokemon->status == false ) {
+        if ($pokemon == null || $pokemon->status == false) {
             return $this->res(404, [], "Pokemon does not exit");
+        }
+        //取得登入ID
+        $userid = Auth::id();
+        //判斷是否是使用者
+        if ($pokemon->user_id != $userid) {
+            return $this->res(403, [], "Not the pokemon's user");
         }
         $pokemonSkill = [];
         $pokemonSkill['skill1'] = $pokemon->skill1;
@@ -74,8 +87,14 @@ class SkillController extends BaseController
     public function learn(SkillRequest $request, string $id)
     {
         $pokemon = Pokemon::find($id);
-        if ($pokemon == null || $pokemon->status == false ) {
+        if ($pokemon == null || $pokemon->status == false) {
             return $this->res(404, [], "Pokemon does not exit");
+        }
+        //取得登入ID
+        $userid = Auth::id();
+        //判斷是否是使用者
+        if ($pokemon->user_id != $userid) {
+            return $this->res(403, [], "Not the pokemon's user");
         }
         $skill1 = $request->skill1;
         $skill2 = $request->skill2;
