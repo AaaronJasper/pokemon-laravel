@@ -135,4 +135,8 @@ class UserController extends BaseController
         DB::table("password_reset_tokens")->where("email", $request->email)->delete();
         return $this->res(200, [], "Update password success");
     }
+    //未登入(讓middleware轉址)
+    public function notLogin(){
+        return $this->res(401, [], "Not logged in");
+    }
 }

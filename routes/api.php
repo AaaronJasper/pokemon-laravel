@@ -22,7 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //});
-
 Route::resource('pokemon', PokemonController::class)->except("edit", "create");
 //用戶註冊
 Route::post("user/register", [UserController::class, 'register']);
@@ -56,6 +55,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/auth/google/callback', [\App\Http\Controllers\SocialiteController::class, 'googleLoginCallback'])->name('/auth/google/callback');
     Route::get('/auth/google/logout', [\App\Http\Controllers\SocialiteController::class, 'googleLogout'])->name('/auth/google/logout');
 });
+//回傳未登入(讓middleware轉址)
+Route::get('notLogin', [UserController::class, 'notLogin'])->name("notLogin");
 
 //測試
-Route::get('test', [TestController::class, 'test'])->middleware("auth:sanctum");
+Route::get('test', [TestController::class, 'test'])->name("test");
