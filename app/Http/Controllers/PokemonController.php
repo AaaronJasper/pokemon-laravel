@@ -22,6 +22,7 @@ class PokemonController extends BaseController
     public function __construct(PokemonService $pokemonService)
     {
         $this->pokemonService = $pokemonService;
+        $this->middleware('auth:sanctum')->except(["index","show"]);
     }
 
     /**

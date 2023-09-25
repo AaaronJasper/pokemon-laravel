@@ -24,12 +24,6 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::resource('pokemon', PokemonController::class)->except("edit", "create");
-Route::resource("nature", NatureController::class)->only('update', 'store');
-Route::resource("ability", AbilityController::class)->only('update', 'store');
-//技能
-Route::get("pokemon/{id}/enableSkill", [SkillController::class, 'index']);
-Route::get("pokemon/{id}/skill", [SkillController::class, 'show']);
-Route::post("pokemon/{id}/skill", [SkillController::class, 'learn']);
 //用戶註冊
 Route::post("user/register", [UserController::class, 'register']);
 //用戶登錄
@@ -46,6 +40,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete("user/logout", [UserController::class, 'logout']);
     //再次發送驗證
     Route::post('/send_verify', [UserController::class, "send_verify"]);
+    //性格
+    Route::resource("nature", NatureController::class)->only('update', 'store');
+    //特性
+    Route::resource("ability", AbilityController::class)->only('update', 'store');
+    //技能
+    Route::get("pokemon/{id}/enableSkill", [SkillController::class, 'index']);
+    Route::get("pokemon/{id}/skill", [SkillController::class, 'show']);
+    Route::post("pokemon/{id}/skill", [SkillController::class, 'learn']);
 });
 //google登入(需用web中間件才能讓套件產生作用)
 //也可以直接加在web.php
@@ -56,4 +58,4 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 //測試
-Route::get('test', [TestController::class, 'test']);
+Route::get('test', [TestController::class, 'test'])->middleware("auth:sanctum");

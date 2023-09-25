@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\PokemonService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TestController extends Controller
 {
@@ -15,9 +16,9 @@ class TestController extends Controller
 
     public function test()
     {
-        return "test2";
-        $response = $this->pokemonService->checkPokemonEvolution("bulbasaur" , 9);
-        return $response;
+        return Auth::id();
+        //$response = $this->pokemonService->checkPokemonEvolution("bulbasaur" , 9);
+        //return $response;
     }
 
     public function index()
