@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Models\Pokemon;
+use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -11,7 +13,7 @@ class ErrorTest extends TestCase
 {
     use DatabaseTransactions;
     /**
-     * 測試搜尋空寶可夢
+     * 測試搜尋不存在寶可夢
      */
     public function test_query_not_exits_pokemons()
     {
@@ -24,7 +26,7 @@ class ErrorTest extends TestCase
     public function test_query_keyword_pokemons()
     {
         $response = $this->get('/api/pokemon/', [
-            "query" => "xyz"
+            "query" => "a"
         ]);
         $response->assertStatus(200);
     }
@@ -33,9 +35,12 @@ class ErrorTest extends TestCase
      */
     public function test_create_exits_ability()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
             ->post('/api/ability', [
-                "ability" => "滑起來"
+                "ability" => "負電"
             ]);
         $response->assertStatus(422);
     }
@@ -44,6 +49,9 @@ class ErrorTest extends TestCase
      */
     public function test_update_not_exits_ability()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
             ->put('/api/ability/1000', [
                 "ability" => "過來一下"
@@ -55,6 +63,9 @@ class ErrorTest extends TestCase
      */
     public function test_create_exits_nature()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
             ->post('/api/nature', [
                 "nature" => "大膽"
@@ -66,6 +77,9 @@ class ErrorTest extends TestCase
      */
     public function test_update_not_exits_nature()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
             ->put('/api/nature/9999', [
                 "nature" => "過來一下"
@@ -77,6 +91,13 @@ class ErrorTest extends TestCase
      */
     public function test_create_not_exits_race()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        // 使用你的工廠方法來創建一個寶可夢
+        $pokemon = Pokemon::factory()->create([
+            'user_id' => $user->id,
+        ]);
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
             ->post('/api/pokemon', [
                 "name" => "pepepe",
@@ -92,6 +113,13 @@ class ErrorTest extends TestCase
      */
     public function test_create_not_exits_nature()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        // 使用你的工廠方法來創建一個寶可夢
+        $pokemon = Pokemon::factory()->create([
+            'user_id' => $user->id,
+        ]);
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
             ->post('/api/pokemon', [
                 "name" => "pepepe",
@@ -107,8 +135,11 @@ class ErrorTest extends TestCase
      */
     public function test_update_not_exits_pokemon()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
-            ->put('/api/pokemon/4', [
+            ->put('/api/pokemon/99', [
                 "name" => "pepepe",
                 "level" => "9",
                 "ability" => "正電",
@@ -121,8 +152,11 @@ class ErrorTest extends TestCase
      */
     public function test_update_not_exits_pokemon_nature()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->withHeaders(['Accept' => 'application/json'])
-            ->put('/api/pokemon/5', [
+            ->put('/api/pokemon/1', [
                 "name" => "pepepe",
                 "level" => "9",
                 "ability" => "正電",
@@ -131,11 +165,14 @@ class ErrorTest extends TestCase
         $response->assertStatus(422);
     }
     /**
-     * 測試更新不存在寶可夢性格
+     * 測試刪除不存在寶可夢
      */
     public function test_delete_not_exits_pokemon()
     {
-        $response = $this->delete('/api/pokemon/13');
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
+        $response = $this->delete('/api/pokemon/99');
         $response->assertStatus(200);
     }
     /**
@@ -143,15 +180,21 @@ class ErrorTest extends TestCase
      */
     public function test_query_not_exits_pokemon_enable_skill()
     {
-        $response = $this->get('/api/pokemon/4/enableSkill');
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
+        $response = $this->get('/api/pokemon/99/enableSkill');
         $response->assertStatus(200);
     }
     /**
-     * 測試查詢不存在寶可夢可學習技能
+     * 測試查詢不存在寶可夢擁有學習技能
      */
     public function test_query_not_exits_pokemon_own_skill()
     {
-        $response = $this->get('/api/pokemon/4/skill');
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
+        $response = $this->get('/api/pokemon/99/skill');
         $response->assertStatus(200);
     }
     /**
@@ -159,6 +202,9 @@ class ErrorTest extends TestCase
      */
     public function test_pokemon_learn_skill()
     {
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->post('/api/pokemon/4/skill', [
             "skill1" => "double-edge",
             "skill2" => "growl",
@@ -168,21 +214,36 @@ class ErrorTest extends TestCase
         $response->assertStatus(200);
     }
     /**
-     * 測試不存在寶可夢學習相同技能
+     * 測試寶可夢學習相同技能
      */
     public function test_pokemon_learn_same_skill()
     {
-        $response = $this->post('/api/pokemon/5/skill', [
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        // 使用你的工廠方法來創建一個寶可夢
+        $pokemon = Pokemon::factory()->create([
+            'user_id' => $user->id,
+        ]);
+        $this->actingAs($user);
+        $response = $this->post('/api/pokemon/'.$pokemon->id."/skill", [
             "skill2" => "transform",
+            "skill3" => "transform"
         ]);
         $response->assertStatus(200);
     }
     /**
-     * 測試不存在寶可夢學習非可學習技能
+     * 測試寶可夢學習非可學習技能
      */
     public function test_pokemon_learn_unable_skill()
     {
-        $response = $this->post('/api/pokemon/5/skill', [
+        // 使用你的工廠方法來創建一個使用者
+        $user = User::factory()->create();
+        // 使用你的工廠方法來創建一個寶可夢
+        $pokemon = Pokemon::factory()->create([
+            'user_id' => $user->id,
+        ]);
+        $this->actingAs($user);
+        $response = $this->post('/api/pokemon/'.$pokemon->id."/skill", [
             "skill2" => "cut",
         ]);
         $response->assertStatus(200);

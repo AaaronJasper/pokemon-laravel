@@ -150,13 +150,13 @@ class PokemonController extends BaseController
         $pokemon = Pokemon::find($id);
         //取得登入ID
         $id = Auth::id();
-        //判斷是否是使用者
-        if ($pokemon->user_id != $id){
-            return $this->res(403, [], "Not the pokemon's user");
-        }
         //確認是否有寶可夢
         if ($pokemon == null || $pokemon->status == false ) {
             return $this->res(404, [], "Pokemon does not exit");
+        }
+        //判斷是否是使用者
+        if ($pokemon->user_id != $id){
+            return $this->res(403, [], "Not the pokemon's user");
         }
         $name = $request->input('name');
         $level = $request->input('level');
@@ -202,13 +202,13 @@ class PokemonController extends BaseController
         $pokemon = Pokemon::find($id);
         //取得登入ID
         $id = Auth::id();
-        //判斷是否是使用者
-        if ($pokemon->user_id != $id){
-            return $this->res(403, [], "Not the pokemon's user");
-        }
         //確認是否有寶可夢
         if ($pokemon == null) {
             return $this->res(404, [], "Pokemon does not exit");
+        }
+        //判斷是否是使用者
+        if ($pokemon->user_id != $id){
+            return $this->res(403, [], "Not the pokemon's user");
         }
         //確認是否已刪除過
         if ($pokemon->status == false) {
