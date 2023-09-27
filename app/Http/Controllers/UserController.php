@@ -17,7 +17,14 @@ use App\Mail\ForgetPasswordMail;
 
 class UserController extends BaseController
 {
-    //註冊
+    /**
+     *註冊新用戶
+     * @response{
+     * "code": 201,
+     * "data": "5|DZTNk2mBYpPkew2cxuHJFYmmOXF5nE7yjNyIfjKL",
+     * "message": "Register success"
+     * }
+     */
     public function register(RegisterRequest $request)
     {
         //創建用戶
@@ -27,13 +34,23 @@ class UserController extends BaseController
             "password" => password_hash($request->input("password"), PASSWORD_DEFAULT),
             "created_at" => Carbon::now(),
         ]);
+        //生成登入token
+        $token = $user->createToken("myapptoken")->plainTextToken;
         //發送驗證信
         event(new UserRegister($request->input("email")));
         //回傳資料
-        $data = new UserResource($user);
-        return $this->res(201, $data, "Register success");
+        //$data = new UserResource($user);
+        //$data[] = ["token" => $token];
+        return $this->res(201, $token, "Register success");
     }
-    //登入
+    /**
+     *登入用戶
+     * @response{
+     * "code": 200,
+     * "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",
+     * "message": "Login success"
+     * }
+     */
     public function login(LoginRequest $request)
     {
         //找用戶郵箱
@@ -53,7 +70,17 @@ class UserController extends BaseController
             return $this->res(401, $data, "Login failed");
         }
     }
-    //登出
+    /**
+     *登出用戶
+     * @response{
+     * "code": 200,
+     * "data": {
+     *     "name": "rick",
+     *     "email": "a@a.com"
+     * },
+     * "message": "Logout success"
+     * }
+     */
     public function logout()
     {
         $userId = Auth::id();
@@ -64,17 +91,35 @@ class UserController extends BaseController
         $user->tokens()->delete();
         return $this->res(200, $data, "Logout success");
     }
-    //寄送驗證信
-    public function send_verify(){
-        $user=User::find(Auth::id());
-        $data = new UserResource($user); 
-        if($user->email_verified_at!=null){
+    /**
+     *再次寄送驗證信
+     * @response{
+     * "code": 200,
+     * "data": {
+     *     "name": "rick",
+     *     "email": "b@b.com"
+     * },
+     * "message": "Email send successfully"
+     * }
+     */
+    public function send_verify()
+    {
+        $user = User::find(Auth::id());
+        $data = new UserResource($user);
+        if ($user->email_verified_at != null) {
             return $this->res(200, $data, "Already verify email");
         }
         event(new UserRegister($user->email));
         return $this->res(200, $data, "Email send successfully");
     }
-    //執行驗證
+    /**
+     *執行驗證
+     * @response{
+     * "code": 200,
+     * "data": [],
+     * "message": "Verify success"
+     * }
+     */
     public function verify($token)
     {
         $registerUser = DB::table("register_token")->where([
@@ -89,11 +134,19 @@ class UserController extends BaseController
         $select_user->save();
         //刪除token
         DB::table("register_token")->where("token", $token)->delete();
-        
+
         return $this->res(200, [], "Verify success");
     }
-    //忘記密碼
-    public function forget_password(Request $request){
+    /**
+     *發送重設密碼信
+     * @response{
+     * "code": 200,
+     * "data": [],
+     * "message": "Email send successfully"
+     * }
+     */
+    public function forget_password(Request $request)
+    {
         //驗證email
         $request->validate([
             'email' => 'required|email|exists:users'
@@ -112,7 +165,14 @@ class UserController extends BaseController
         Mail::to($request->email)->send(new ForgetPasswordMail($token));
         return $this->res(200, [], "Email send successfully");
     }
-    //重設密碼
+    /**
+     *執行重設密碼
+     * @response{
+     * "code": 200,
+     * "data": [],
+     * "message": "Update password success"
+     * }
+     */
     public function reset_password(Request $request)
     {
         $request->validate([
@@ -135,8 +195,16 @@ class UserController extends BaseController
         DB::table("password_reset_tokens")->where("email", $request->email)->delete();
         return $this->res(200, [], "Update password success");
     }
-    //未登入(讓middleware轉址)
-    public function notLogin(){
+    /**
+     *未登入(讓middleware轉址)
+     * @response{
+     * "code": 401,
+     * "data": [],
+     * "message": "Not logged in"
+     * }
+     */
+    public function notLogin()
+    {
         return $this->res(401, [], "Not logged in");
     }
 }

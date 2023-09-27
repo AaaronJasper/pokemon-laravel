@@ -53,7 +53,6 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::group(['middleware' => ['web']], function () {
     Route::get('/auth/google', [\App\Http\Controllers\SocialiteController::class, 'googleLogin'])->name('/auth/google');
     Route::get('/auth/google/callback', [\App\Http\Controllers\SocialiteController::class, 'googleLoginCallback'])->name('/auth/google/callback');
-    Route::get('/auth/google/logout', [\App\Http\Controllers\SocialiteController::class, 'googleLogout'])->name('/auth/google/logout');
 });
 //回傳未登入(讓middleware轉址)
 Route::get('notLogin', [UserController::class, 'notLogin'])->name("notLogin");

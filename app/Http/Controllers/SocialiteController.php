@@ -21,8 +21,14 @@ class SocialiteController extends BaseController
     {
         return Socialite::driver('google')->redirect();
     }
-
-    //接收google回傳的值
+    /**
+     *google登入用戶
+     * @response{
+     * "code": 200,
+     * "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",
+     * "message": "Login success"
+     * }
+     */
     public function googleLoginCallback()
     {
         $user = Socialite::driver('google')->stateless()->user();
@@ -51,18 +57,6 @@ class SocialiteController extends BaseController
             $token = $newUser->createToken("myapptoken")->plainTextToken;
             return $this->res(200, $token, "Login success");
         }
-    }
-
-    //登出
-    public function googleLogout()
-    {
-        $userId = Auth::id();
-        // 根據 ID 取得使用者
-        $user = User::find($userId);
-        $data = new UserResource($user);
-        // 刪除特定的 token
-        $user->tokens()->delete();
-        return $this->res(200, $data, "Logout success");
     }
 }
 
