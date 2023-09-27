@@ -16,7 +16,9 @@ class SocialiteController extends BaseController
     {
         $this->middleware("auth:sanctum")->only("googleLogout");
     }
-    //進入google的頁面
+    /**
+     *進入google頁面
+     */
     public function googleLogin()
     {
         return Socialite::driver('google')->redirect();
