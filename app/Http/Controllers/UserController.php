@@ -134,7 +134,6 @@ class UserController extends BaseController
         $select_user->save();
         //刪除token
         DB::table("register_token")->where("token", $token)->delete();
-
         return $this->res(200, [], "Verify success");
     }
     /**

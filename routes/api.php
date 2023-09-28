@@ -23,22 +23,8 @@ use Illuminate\Support\Facades\Route;
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //});
 Route::resource('pokemon', PokemonController::class)->except("edit", "create");
-//用戶註冊
-Route::post("user/register", [UserController::class, 'register']);
-//用戶登錄
-Route::post("user/login", [UserController::class, 'login']);
-//驗證信箱
-Route::get("/verify/{token}", [UserController::class, "verify"])->name("verify");
-//寄送忘記密碼郵件
-Route::post('/forget_password', [UserController::class, "forget_password"]);
-//重設密碼
-Route::post("/reset_password/{token}", [UserController::class, "reset_password"])->name("reset_password");
 //需登入路由
 Route::middleware('auth:sanctum')->group(function () {
-    //用戶登出
-    Route::delete("user/logout", [UserController::class, 'logout']);
-    //再次發送驗證
-    Route::post('/send_verify', [UserController::class, "send_verify"]);
     //性格
     Route::resource("nature", NatureController::class)->only('update', 'store');
     //特性
@@ -48,6 +34,23 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get("pokemon/{id}/skill", [SkillController::class, 'show']);
     Route::post("pokemon/{id}/skill", [SkillController::class, 'learn']);
 });
+//用戶註冊
+Route::post("user/register", [UserController::class, 'register']);
+//用戶登錄
+Route::post("user/login", [UserController::class, 'login']);
+//需登入路由
+Route::middleware('auth:sanctum')->group(function () {
+    //用戶登出
+    Route::delete("user/logout", [UserController::class, 'logout']);
+    //再次發送驗證
+    Route::post('/send_verify', [UserController::class, "send_verify"]);
+});
+//驗證信箱
+Route::get("/verify/{token}", [UserController::class, "verify"])->name("verify");
+//寄送忘記密碼郵件
+Route::post('/forget_password', [UserController::class, "forget_password"]);
+//重設密碼
+Route::post("/reset_password/{token}", [UserController::class, "reset_password"])->name("reset_password");
 //google登入(需用web中間件才能讓套件產生作用)
 //也可以直接加在web.php
 Route::group(['middleware' => ['web']], function () {
