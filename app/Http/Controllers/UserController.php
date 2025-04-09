@@ -41,7 +41,7 @@ class UserController extends BaseController
         //回傳資料
         //$data = new UserResource($user);
         //$data[] = ["token" => $token];
-        return $this->res(201, $token, "Register success");
+        return $this->res(201, ['id' => $user->id, 'user' => $user->name, 'token' => $token], "Register success");
     }
     /**
      *登入用戶
@@ -64,7 +64,7 @@ class UserController extends BaseController
         if (password_verify($request->password, $user->password)) {
             //建立登入token
             $token = $user->createToken("myapptoken")->plainTextToken;
-            return $this->res(200, $token, "Login success");
+            return $this->res(200, ['id' => $user->id, 'user' => $user->name, 'token' => $token], "Login success");
         } else {
             $data = new UserResource($user);
             return $this->res(401, $data, "Login failed");

@@ -18,6 +18,7 @@ class PokemonResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "user_id" => $this->user->id,
             "name" => $this->name,
             "level" => $this->level,
             "race" => $this->race,
