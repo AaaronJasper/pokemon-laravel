@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //});
-Route::resource('pokemon', PokemonController::class)->except("edit", "create");
+Route::middleware('api')->resource('pokemon', PokemonController::class)->except("edit", "create");
 //需登入路由
 Route::middleware('auth:sanctum')->group(function () {
     //性格
