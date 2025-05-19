@@ -39,7 +39,7 @@ Route::post("user/register", [UserController::class, 'register']);
 //用戶登錄
 Route::post("user/login", [UserController::class, 'login']);
 //拿到 OAuth 登入 user資料
-Route::post('user/get_user_data', [UserController::class, "getUserData"]);
+Route::post('oauth/exchange-token', [UserController::class, "exchange_token"]);
 //需登入路由
 Route::middleware('auth:sanctum')->group(function () {
     //用戶登出

@@ -95,7 +95,7 @@ class UserController extends BaseController
     /**
      * 拿取使用者資訊
      */
-    public function getUserData(Request $request)
+    public function exchange_token(Request $request)
     {
         $code = $request->input('code');
 
