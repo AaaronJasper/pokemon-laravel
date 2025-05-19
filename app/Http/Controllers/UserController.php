@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Mail\ForgetPasswordMail;
+use Illuminate\Support\Facades\Cache;
 
 class UserController extends BaseController
 {
@@ -64,7 +65,7 @@ class UserController extends BaseController
         if (password_verify($request->password, $user->password)) {
             //建立登入token
             $token = $user->createToken("myapptoken")->plainTextToken;
-            return $this->res(200, ['id' => $user->id, 'user' => $user->name, 'token' => $token], "Login success");
+            return $this->res(200, ['id' => $user->id, 'user' => $user->name, 'token' => $token, 'isVerify' => $user->email_verified_at !== null], "Login success");
         } else {
             $data = new UserResource($user);
             return $this->res(401, $data, "Login failed");
@@ -90,6 +91,22 @@ class UserController extends BaseController
         // 刪除特定的 token
         $user->tokens()->delete();
         return $this->res(200, $data, "Logout success");
+    }
+    /**
+     * 拿取使用者資訊
+     */
+    public function getUserData(Request $request)
+    {
+        $code = $request->input('code');
+
+        $userId = Cache::pull("oauth_code:{$code}"); // 用 pull 取完就刪
+        if (!$userId) {
+            return response()->json(['message' => 'Invalid or expired code'], 400);
+        }
+        $user = User::find($userId);
+        $token = $user->createToken("myapptoken")->plainTextToken;
+
+        return $this->res(200, ['id' => $user->id, 'user' => $user->name, 'token' => $token, 'isVerify' => $user->email_verified_at !== null], "Login success");
     }
     /**
      *再次寄送驗證信
