@@ -14,7 +14,7 @@ class AbilityRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            "ability" => "required|min:2|max:8|unique:abilities,name"
+            "ability" => "required|min:2|max:30|unique:abilities,name"
         ];
     }
 }

@@ -14,7 +14,7 @@ class NatureRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            "nature" => "required|min:2|max:8|unique:natures,name"
+            "nature" => "required|min:2|max:30|unique:natures,name"
         ];
     }
 }
