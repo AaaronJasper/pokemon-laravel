@@ -10,6 +10,9 @@ use App\Services\PokemonBasicService;
 use App\Services\PokemonService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
+
 
 
 class PokemonController extends BaseController
@@ -21,7 +24,7 @@ class PokemonController extends BaseController
     {
         $this->pokemonService = $pokemonService;
         $this->pokemonBasicService = $pokemonBasicService;
-        $this->middleware('auth:sanctum')->except(["index", "show"]);
+        $this->middleware('auth:sanctum')->except(["index", "show", 'get_pokemon_picture']);
     }
 
     /**

@@ -8,6 +8,7 @@ use App\Http\Resources\PokemonCollection;
 use App\Models\Ability;
 use App\Models\Nature;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class PokemonBasicService
 {
@@ -57,6 +58,8 @@ class PokemonBasicService
         //確認是否進化
         $level = $request->level;
         $race = $this->pokemonService->checkPokemonEvolution($race, $level);
+        //拿取pokemon picture url
+        $url = $this->getPokemonPicture($race);
         //新增寶可夢
         $nature = Nature::where("name", $request->nature)->value("id");
         $ability = Ability::where("name", $request->ability)->value("id");
@@ -66,7 +69,8 @@ class PokemonBasicService
             "race" => $race,
             "nature_id" => $nature,
             "ability_id" => $ability,
-            "user_id" => $id
+            "user_id" => $id,
+            "image_url" => $url
         ]);
         //回傳資料格式
         $pokemonData = new PokemonResource($pokemon);
@@ -137,5 +141,22 @@ class PokemonBasicService
         $pokemon->status = false;
         $pokemon->save();
         return [200, [], "successfully deleted"];
+    }
+
+    public function getPokemonPicture(string $race)
+    {
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon/{$race}");
+
+        if (!$response->successful()) {
+            return [404, [], "Pokémon not found"];
+        }
+
+        $imageData = $response->json()['sprites']['front_default'];
+
+        if (!$imageData) {
+            return [404, [], "Image not available"];
+        }
+
+        return $imageData;
     }
 }
