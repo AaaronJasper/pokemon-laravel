@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\PokemonService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class TestController extends Controller
 {
@@ -16,9 +17,15 @@ class TestController extends Controller
 
     public function test()
     {
-        return Auth::id();
-        //$response = $this->pokemonService->checkPokemonEvolution("bulbasaur" , 9);
-        //return $response;
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon/charizard");
+
+        $imageData = $response['sprites']['front_default'];
+
+        if (!$imageData) {
+            return null;
+        }
+
+        return $imageData;
     }
 
     public function index()

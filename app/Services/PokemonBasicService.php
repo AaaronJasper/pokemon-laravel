@@ -66,7 +66,7 @@ class PokemonBasicService
         $pokemon = Pokemon::create([
             "name" => $request->name,
             "level" => $level,
-            "race" => $race,
+            "race" => strtolower($race),
             "nature_id" => $nature,
             "ability_id" => $ability,
             "user_id" => $id,
@@ -145,16 +145,12 @@ class PokemonBasicService
 
     public function getPokemonPicture(string $race)
     {
-        $response = Http::get("https://pokeapi.co/api/v2/pokemon/{$race}");
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon/" . strtolower($race));
 
-        if (!$response->successful()) {
-            return [404, [], "Pokémon not found"];
-        }
-
-        $imageData = $response->json()['sprites']['front_default'];
+        $imageData = $response['sprites']['front_default'];
 
         if (!$imageData) {
-            return [404, [], "Image not available"];
+            return null;
         }
 
         return $imageData;
