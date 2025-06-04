@@ -105,7 +105,12 @@ class PokemonBasicService
         }
         if (!empty($level) && $level > $pokemon->level) {
             $pokemon->level = $level;
+            $prevRace = $pokemon->race;
             $pokemon->race = $this->pokemonService->checkPokemonEvolution($pokemon->race, $level);
+            
+            if ($prevRace != $pokemon->race){
+                $pokemon->image_url = $this->getPokemonPicture($pokemon->race);
+            }
         }
         //確認性格
         if (!empty($nature)) {
