@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Mail\ForgetPasswordMail;
 use Illuminate\Support\Facades\Cache;
+use App\Jobs\SendVerificationEmailJob;
 
 class UserController extends BaseController
 {
@@ -38,7 +39,9 @@ class UserController extends BaseController
         //生成登入token
         $token = $user->createToken("myapptoken")->plainTextToken;
         //發送驗證信
-        event(new UserRegister($request->input("email")));
+        //event(new UserRegister($request->input("email")));
+        // use queue and jobs instead
+        SendVerificationEmailJob::dispatch($request->input("email"));
         //回傳資料
         //$data = new UserResource($user);
         //$data[] = ["token" => $token];
@@ -126,7 +129,9 @@ class UserController extends BaseController
         if ($user->email_verified_at != null) {
             return $this->res(200, $data, "Already verify email");
         }
-        event(new UserRegister($user->email));
+        //event(new UserRegister($user->email));
+        // use queue and jobs instead
+        SendVerificationEmailJob::dispatch($user->email);
         return $this->res(200, $data, "Email send successfully");
     }
     /**
