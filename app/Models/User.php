@@ -22,6 +22,16 @@ class User extends Authenticatable
     {
         return $this->hasMany(Pokemon::class, 'user_id', 'id');
     }
+
+    public function sentTrades()
+    {
+        return $this->hasMany(Trade::class, 'sender_id', 'id');
+    }
+
+    public function receivedTrades()
+    {
+        return $this->hasMany(Trade::class, 'receiver_id', 'id');
+    }
     /**
      * The attributes that are mass assignable.
      *

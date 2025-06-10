@@ -35,5 +35,13 @@ class Pokemon extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+    public function senderPokemon() 
+    {
+        return $this->hasMany(Trade::class, 'sender_pokemon_id', 'id');
+    }
+    public function receiverPokemon() 
+    {
+        return $this->hasMany(Trade::class, 'receiver_pokemon_id', 'id');
+    } 
 
 }

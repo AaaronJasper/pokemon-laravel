@@ -6,6 +6,7 @@ use App\Http\Controllers\PokemonController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TradeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get("pokemon/{id}/enableSkill", [SkillController::class, 'index']);
     Route::get("pokemon/{id}/skill", [SkillController::class, 'show']);
     Route::post("pokemon/{id}/skill", [SkillController::class, 'learn']);
+    //交易
+    Route::post("trade", [TradeController::class, 'store']);
+    Route::get("trade", [TradeController::class, 'show']);
+    Route::put("trade/{id}/accept", [TradeController::class, 'accept']);
+    Route::put("trade/{id}/reject", [TradeController::class, 'reject']);
 });
 //用戶註冊
 Route::post("user/register", [UserController::class, 'register']);
