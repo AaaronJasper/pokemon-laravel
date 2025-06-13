@@ -19,6 +19,10 @@ class TradeController extends BaseController
         if ($senderPokemon->status == 0 or $receiverPokemon->status == 0){
             return $this->res(403, [], "Pokemon can not be traded");
         }
+        
+        if ($senderPokemon->is_trading == 1 or $receiverPokemon->is_trading == 1){
+            return $this->res(403, [], "Pokemon is in trading process");
+        }
 
         if ($senderPokemon->user_id !== auth()->id()) {
             return $this->res(403, [], "You can only trade your own pokemon");
@@ -48,6 +52,12 @@ class TradeController extends BaseController
             'receiver_pokemon_id' => $receiverPokemon->id,
             'status' => 'pending',
         ]);
+
+        $senderPokemon->is_trading = true;
+        $senderPokemon->save();
+
+        $receiverPokemon->is_trading = true;
+        $receiverPokemon->save();
 
         return $this->res(201, $trade, "Initiate trade successfully");
     }
@@ -100,6 +110,9 @@ class TradeController extends BaseController
             $senderPokemon->user_id = $receiverId;
             $receiverPokemon->user_id = $senderId;
 
+            $senderPokemon->is_trading = false;
+            $receiverPokemon->is_trading = false;
+
             $senderPokemon->save();
             $receiverPokemon->save();
 
@@ -110,7 +123,7 @@ class TradeController extends BaseController
         return $this->res(200, $trade, 'Trade accepted successfully');
     }
 
-    //accept trade
+    //reject trade
     public function reject($id)
     {
         $userId = Auth::id();
@@ -123,6 +136,15 @@ class TradeController extends BaseController
         if (!$trade) {
             return $this->res(404, [], 'Trade not found or not allowed to reject');
         }
+
+        $senderPokemon = $trade->senderPokemon;
+        $receiverPokemon = $trade->receiverPokemon;
+
+        $senderPokemon->is_trading = false;
+        $receiverPokemon->is_trading = false;
+
+        $senderPokemon->save();
+        $receiverPokemon->save();
 
         $trade->status = 'rejected';
         $trade->save();

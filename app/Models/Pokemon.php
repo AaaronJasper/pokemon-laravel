@@ -20,7 +20,8 @@ class Pokemon extends Model
         'skill3_id',
         'skill4_id',
         'user_id',
-        'image_url'
+        'image_url',
+        'is_trading',
     ];
 
     public function nature()
