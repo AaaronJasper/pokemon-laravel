@@ -79,7 +79,7 @@ class TradeController extends BaseController
     {
         $userId = Auth::id();
 
-        $trade = $this->tradeService->findPendingTrade($userId);
+        $trade = $this->tradeService->findPendingTradeByReceiver($userId);
 
         if (!$trade) {
             return $this->res(404, [], 'Trade not found or not allowed');

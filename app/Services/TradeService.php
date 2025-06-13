@@ -20,6 +20,18 @@ class TradeService
         return $trade;
     }
 
+    //find the trade in process by receiver
+    public function findPendingTradeByReceiver($userId)
+    {
+        $trade = Trade::where('status', 'pending')
+            ->where(function ($query) use ($userId) {
+                $query->where('receiver_id', $userId);
+            })
+            ->first();
+
+        return $trade;
+    }
+
     //store new Trade
     public function createNewTrade($userId, $senderPokemon, $receiverPokemon)
     {
