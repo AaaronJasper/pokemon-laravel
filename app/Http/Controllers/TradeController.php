@@ -87,7 +87,7 @@ class TradeController extends BaseController
 
         $this->tradeService->executeTrade($trade);
 
-        return $this->res(200, $trade, 'Trade accepted successfully');
+        return $this->res(200, $trade, 'Trade completed successfully');
     }
 
     //reject trade

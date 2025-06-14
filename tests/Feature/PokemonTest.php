@@ -9,7 +9,7 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class PokemonTest extends TestCase
 {
     use DatabaseTransactions;
     /**
