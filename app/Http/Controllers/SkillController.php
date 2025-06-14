@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Http;
 class SkillController extends BaseController
 {
     /**
-     * 顯示可學習技能
+     * Show learnable skills
      */
     public function index(string $id)
     {
@@ -41,7 +41,7 @@ class SkillController extends BaseController
     }
 
     /**
-     * 顯示已學習技能
+     * Show learned skills
      */
     public function show(string $id)
     {
@@ -64,7 +64,7 @@ class SkillController extends BaseController
     }
 
     /**
-     * 學習技能
+     * Learn skills
      * @response{
      * "code": 201,
      * "data": {
@@ -72,8 +72,8 @@ class SkillController extends BaseController
      *     "name": "pepe2",
      *     "level": 6,
      *     "race": "ditto",
-     *     "nature": "樂天",
-     *     "ability": "正電",
+     *     "nature": "creative",
+     *     "ability": "patient",
      *     "skill1": "transform",
      *     "skill2": null,
      *     "skill3": null,

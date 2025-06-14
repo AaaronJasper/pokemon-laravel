@@ -28,7 +28,7 @@ class PokemonController extends BaseController
     }
 
     /**
-     * 查詢寶可夢
+     * Search all Pokemons
      */
     public function index(Request $request)
     {
@@ -39,7 +39,7 @@ class PokemonController extends BaseController
     }
 
     /**
-     *新增寶可夢
+     * Store a Pokemon
      * @response{
      * "code": 201,
      * "data": {
@@ -70,7 +70,7 @@ class PokemonController extends BaseController
     }
 
     /**
-     * 查詢單一寶可夢
+     * Search a Pokemon
      */
     public function show(string $id)
     {
@@ -85,7 +85,7 @@ class PokemonController extends BaseController
     }
 
     /**
-     * 更新寶可夢
+     * Update a Pokemon
      * @response{
      * "code": 201,
      * "data": {
@@ -93,8 +93,8 @@ class PokemonController extends BaseController
      *     "name": "pepe99",
      *     "level": "11",
      *     "race": "ditto",
-     *     "nature": "天真",
-     *     "ability": "惡臭",
+     *     "nature": "creative",
+     *     "ability": "paitent",
      *     "skill1": null,
      *     "skill2": null,
      *     "skill3": null,
@@ -112,7 +112,7 @@ class PokemonController extends BaseController
     }
 
     /**
-     * 刪除寶可夢
+     * Delete a Pokemon
      * @response{
      * "code": 200,
      * "data": [],

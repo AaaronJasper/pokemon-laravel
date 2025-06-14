@@ -12,11 +12,11 @@ class AbilityController extends BaseController
 {
     
     /**
-     * 新增特性
+     * Create an ability
      * @response {
      * "code": 201,
      * "data": {
-     *     "name": "好滑",
+     *     "name": "patient",
      *     "updated_at": "2023-09-20T09:43:34.000000Z",
      *     "created_at": "2023-09-20T09:43:34.000000Z",
      *     "id": 270
@@ -34,12 +34,12 @@ class AbilityController extends BaseController
     }
 
     /**
-     * 修改特性
+     * update an ability
      * @response{
      * "code": 200,
      * "data": {
      *     "id": 270,
-     *     "name": "好滑好嫩",
+     *     "name": "patient",
      *     "created_at": "2023-09-20T09:43:34.000000Z",
      *     "updated_at": "2023-09-20T09:45:19.000000Z"
      * },

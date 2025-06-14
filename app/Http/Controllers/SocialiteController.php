@@ -19,14 +19,14 @@ class SocialiteController extends BaseController
         $this->middleware("auth:sanctum")->only("googleLogout");
     }
     /**
-     *進入google頁面
+     * Heading to Google login page
      */
     public function googleLogin()
     {
         return Socialite::driver('google')->redirect();
     }
     /**
-     *google登入用戶
+     * Google login callback
      * @response{
      * "code": 200,
      * "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",

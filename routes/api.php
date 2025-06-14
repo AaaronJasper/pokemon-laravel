@@ -69,4 +69,4 @@ Route::group(['middleware' => ['web']], function () {
 Route::get('notLogin', [UserController::class, 'notLogin'])->name("notLogin");
 
 //測試
-Route::get('test', [TestController::class, 'test'])->name("test");
+//Route::get('test', [TestController::class, 'test'])->name("test");

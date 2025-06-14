@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 查詢寶可夢
+      title: 'Search all Pokemons'
       description: ''
       authenticated: false
       custom: []
@@ -29,13 +29,14 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"code":200,"data":{"data":[{"id":5,"name":"\u767e\u8b8a\u602a","level":99,"race":"ditto","nature":"\u7121\u804a\u804a","ability":"\u60e1\u81ed","skill1":"transform","skill2":null,"skill3":null,"skill4":null,"created_at":"2023-08-28 08:19:51","updated_at":"2023-09-05 07:55:34"},{"id":7,"name":"pepe","level":90,"race":"venusaur","nature":"\u5929\u771f","ability":"\u60e1\u81ed","skill1":"grass-knot","skill2":"sunny-day","skill3":"nature-power","skill4":"cut","created_at":"2023-08-29 03:42:19","updated_at":"2023-08-30 06:22:12"},{"id":8,"name":"pepe","level":99,"race":"venusaur","nature":"\u5927\u81bd","ability":"\u60e1\u81ed","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2023-08-29 03:52:25","updated_at":"2023-08-29 05:00:59"},{"id":9,"name":"pepe","level":66,"race":"venusaur","nature":"\u7121\u804a\u804a","ability":"\u4e09\u500b\u5b57\u8d85\u7d1a\u53ef\u60b2","skill1":"cut","skill2":null,"skill3":null,"skill4":null,"created_at":"2023-08-29 04:22:09","updated_at":"2023-09-01 08:09:16"},{"id":11,"name":"skr","level":66,"race":"venusaur","nature":"\u7121\u804a\u804a","ability":"\u4e09\u500b\u5b57\u8d85\u7d1a\u53ef\u60b2","skill1":"nature-power","skill2":"sunny-day","skill3":"growl","skill4":"cut","created_at":"2023-09-01 03:49:17","updated_at":"2023-09-01 07:21:21"}]},"message":"search successfully"}'
+        content: '{"code":200,"data":{"data":[{"id":1,"user_id":1,"name":"Gengar no.1","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-06-13 06:22:21","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":2,"user_id":4,"name":"Gengar no.2","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-06-13 06:20:33","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":3,"user_id":1,"name":"Gengar no.3","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":4,"user_id":1,"name":"Gengar no.4","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":5,"user_id":1,"name":"Gengar no.5","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":6,"user_id":1,"name":"Gengar no.6","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":7,"user_id":1,"name":"Gengar no.7","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":8,"user_id":1,"name":"Gengar no.8","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":9,"user_id":1,"name":"Gengar no.9","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":10,"user_id":1,"name":"Gengar no.10","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":11,"user_id":1,"name":"Gengar no.11","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":12,"user_id":1,"name":"Gengar no.12","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":13,"user_id":1,"name":"Gengar no.13","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":14,"user_id":1,"name":"Gengar no.14","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":15,"user_id":1,"name":"Gengar no.15","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":16,"user_id":1,"name":"Gengar no.16","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":17,"user_id":1,"name":"Gengar no.17","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":18,"user_id":1,"name":"Gengar no.18","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":19,"user_id":1,"name":"Gengar no.19","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":20,"user_id":1,"name":"Gengar no.20","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":21,"user_id":1,"name":"Gengar no.21","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":22,"user_id":1,"name":"Gengar no.22","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":23,"user_id":1,"name":"Gengar no.23","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":24,"user_id":1,"name":"Gengar no.24","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":25,"user_id":1,"name":"Gengar no.25","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":26,"user_id":1,"name":"Gengar no.26","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":27,"user_id":1,"name":"Gengar no.27","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":28,"user_id":1,"name":"Gengar no.28","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":29,"user_id":1,"name":"Gengar no.29","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":30,"user_id":1,"name":"Gengar no.30","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":31,"user_id":1,"name":"Gengar no.31","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":32,"user_id":1,"name":"Gengar no.32","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":33,"user_id":1,"name":"Gengar no.33","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":34,"user_id":1,"name":"Gengar no.34","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":35,"user_id":1,"name":"Gengar no.35","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":36,"user_id":1,"name":"Gengar no.36","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":37,"user_id":1,"name":"Gengar no.37","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":38,"user_id":1,"name":"Gengar no.38","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":39,"user_id":1,"name":"Gengar no.39","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":40,"user_id":1,"name":"Gengar no.40","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":41,"user_id":1,"name":"Gengar no.41","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":42,"user_id":1,"name":"Gengar no.42","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":43,"user_id":1,"name":"Gengar no.43","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":44,"user_id":1,"name":"Gengar no.44","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":45,"user_id":1,"name":"Gengar no.45","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":46,"user_id":1,"name":"Gengar no.46","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":47,"user_id":1,"name":"Gengar no.47","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":48,"user_id":1,"name":"Gengar no.48","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":49,"user_id":1,"name":"Gengar no.49","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":50,"user_id":1,"name":"Gengar no.50","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":51,"user_id":1,"name":"Gengar no.51","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":52,"user_id":1,"name":"Gengar no.52","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":53,"user_id":1,"name":"Gengar no.53","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":54,"user_id":1,"name":"Gengar no.54","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":55,"user_id":1,"name":"Gengar no.55","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":56,"user_id":1,"name":"Gengar no.56","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":57,"user_id":1,"name":"Gengar no.57","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":58,"user_id":1,"name":"Gengar no.58","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":59,"user_id":1,"name":"Gengar no.59","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":60,"user_id":1,"name":"Gengar no.60","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":61,"user_id":1,"name":"Gengar no.61","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":62,"user_id":1,"name":"Gengar no.62","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":63,"user_id":1,"name":"Gengar no.63","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":64,"user_id":1,"name":"Gengar no.64","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":65,"user_id":1,"name":"Gengar no.65","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":66,"user_id":1,"name":"Gengar no.66","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":67,"user_id":1,"name":"Gengar no.67","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":68,"user_id":1,"name":"Gengar no.68","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":69,"user_id":1,"name":"Gengar no.69","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":70,"user_id":1,"name":"Gengar no.70","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":71,"user_id":1,"name":"Gengar no.71","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":72,"user_id":1,"name":"Gengar no.72","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":73,"user_id":1,"name":"Gengar no.73","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":74,"user_id":1,"name":"Gengar no.74","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":75,"user_id":1,"name":"Gengar no.75","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":76,"user_id":1,"name":"Gengar no.76","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":77,"user_id":1,"name":"Gengar no.77","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":78,"user_id":1,"name":"Gengar no.78","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":79,"user_id":1,"name":"Gengar no.79","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":80,"user_id":1,"name":"Gengar no.80","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":81,"user_id":1,"name":"Gengar no.81","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":82,"user_id":1,"name":"Gengar no.82","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":83,"user_id":1,"name":"Gengar no.83","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":84,"user_id":1,"name":"Gengar no.84","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":85,"user_id":1,"name":"Gengar no.85","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":86,"user_id":1,"name":"Gengar no.86","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":87,"user_id":1,"name":"Gengar no.87","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":88,"user_id":1,"name":"Gengar no.88","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":89,"user_id":1,"name":"Gengar no.89","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":90,"user_id":1,"name":"Gengar no.90","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":91,"user_id":1,"name":"Gengar no.91","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":92,"user_id":1,"name":"Gengar no.92","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":93,"user_id":1,"name":"Gengar no.93","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":94,"user_id":1,"name":"Gengar no.94","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":95,"user_id":1,"name":"Gengar no.95","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":96,"user_id":1,"name":"Gengar no.96","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":97,"user_id":1,"name":"Gengar no.97","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-05-26 07:51:56","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":98,"user_id":4,"name":"Gengar no.98","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"aaaa","skill1":"mega-punch","skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-06-12 11:05:12","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},{"id":108,"user_id":1,"name":"tariff","level":99,"race":"charizard","nature":"\u5929\u771f","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-27 06:56:16","updated_at":"2025-05-27 06:56:16","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/6.png"},{"id":109,"user_id":1,"name":"tariff2","level":98,"race":"incineroar","nature":"\u5929\u771f","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-27 06:56:40","updated_at":"2025-05-27 06:56:40","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/727.png"},{"id":110,"user_id":1,"name":"buzzwole","level":89,"race":"buzzwole","nature":"creative","ability":"patient","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-04 05:40:19","updated_at":"2025-06-04 05:41:49","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/794.png"},{"id":111,"user_id":1,"name":"guzzlord","level":77,"race":"guzzlord","nature":"creative","ability":"patient","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-04 05:42:19","updated_at":"2025-06-04 05:42:19","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/799.png"},{"id":112,"user_id":4,"name":"mew","level":48,"race":"mew","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-04 06:04:06","updated_at":"2025-06-13 06:22:21","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/151.png"},{"id":113,"user_id":4,"name":"ralts","level":9,"race":"gardevoir","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-04 06:08:40","updated_at":"2025-06-04 06:19:25","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/282.png"},{"id":114,"user_id":4,"name":"raltssss","level":22,"race":"kirlia","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-04 06:19:01","updated_at":"2025-06-04 06:37:21","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/281.png"},{"id":115,"user_id":4,"name":"silvally","level":44,"race":"silvally","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 06:12:34","updated_at":"2025-06-06 06:12:34","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/773.png"},{"id":116,"user_id":4,"name":"necrozma","level":88,"race":"necrozma","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 06:13:10","updated_at":"2025-06-06 06:13:10","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/800.png"},{"id":118,"user_id":3,"name":"palkia","level":88,"race":"palkia","nature":"creative","ability":"patient","user":"\u738b\u59c6\u65af","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 07:31:20","updated_at":"2025-06-06 07:31:20","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/484.png"},{"id":119,"user_id":3,"name":"zeraora","level":90,"race":"zeraora","nature":"creative","ability":"patient","user":"\u738b\u59c6\u65af","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 07:40:31","updated_at":"2025-06-06 07:40:31","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/807.png"},{"id":120,"user_id":4,"name":"gallade","level":89,"race":"gardevoir","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:42:14","updated_at":"2025-06-12 10:59:57","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/282.png"},{"id":121,"user_id":4,"name":"snorlax","level":44,"race":"snorlax","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:42:53","updated_at":"2025-06-06 12:42:53","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/143.png"},{"id":122,"user_id":5,"name":"celebi","level":33,"race":"celebi","nature":"creative","ability":"patient","user":"bbbb","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:43:53","updated_at":"2025-06-14 06:25:46","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/251.png"},{"id":123,"user_id":4,"name":"guzzlord","level":33,"race":"guzzlord","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:48:20","updated_at":"2025-06-06 12:48:20","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/799.png"},{"id":124,"user_id":1,"name":"garchomp","level":77,"race":"garchomp","nature":"creative","ability":"patient","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:49:00","updated_at":"2025-06-12 11:05:12","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/445.png"},{"id":125,"user_id":4,"name":"weezing","level":87,"race":"weezing","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:49:27","updated_at":"2025-06-13 10:13:53","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/110.png"},{"id":126,"user_id":4,"name":"alakazam","level":44,"race":"alakazam","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-06 12:50:37","updated_at":"2025-06-06 12:50:37","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/65.png"},{"id":127,"user_id":4,"name":"nihilego","level":66,"race":"nihilego","nature":"creative","ability":"patient","user":"aaaa","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-10 05:25:46","updated_at":"2025-06-14 06:25:46","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/793.png"},{"id":128,"user_id":5,"name":"silvally","level":88,"race":"silvally","nature":"creative","ability":"patient","user":"bbbb","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-10 05:26:43","updated_at":"2025-06-10 05:26:43","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/773.png"},{"id":129,"user_id":5,"name":"darkrai","level":90,"race":"darkrai","nature":"creative","ability":"patient","user":"bbbb","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-10 05:28:44","updated_at":"2025-06-10 05:28:44","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/491.png"},{"id":130,"user_id":5,"name":"lunala","level":34,"race":"lunala","nature":"creative","ability":"patient","user":"bbbb","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-10 05:30:01","updated_at":"2025-06-13 10:13:53","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/792.png"},{"id":131,"user_id":5,"name":"rayquaza","level":6,"race":"rayquaza","nature":"creative","ability":"patient","user":"bbbb","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-10 05:31:46","updated_at":"2025-06-10 05:31:46","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/384.png"},{"id":132,"user_id":1,"name":"wugtrio","level":90,"race":"wugtrio","nature":"creative","ability":"patient","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-06-11 06:32:48","updated_at":"2025-06-12 10:59:57","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/961.png"}]},"message":"search successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
           x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-allow-credentials: 'true'
         description: null
         custom: []
     responseFields: []
@@ -53,7 +54,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 新增寶可夢
+      title: 'Store a Pokemon'
       description: ''
       authenticated: false
       custom: []
@@ -69,7 +70,7 @@ endpoints:
         name: name
         description: 'Must be at least 1 character. Must not be greater than 8 characters.'
         required: true
-        example: x
+        example: ynpxzgei
         type: string
         enumValues: []
         custom: []
@@ -77,7 +78,7 @@ endpoints:
         name: level
         description: 'Must be at least 1. Must not be greater than 100.'
         required: true
-        example: 24
+        example: 12
         type: number
         enumValues: []
         custom: []
@@ -85,7 +86,7 @@ endpoints:
         name: ability
         description: ''
         required: true
-        example: ut
+        example: sapiente
         type: string
         enumValues: []
         custom: []
@@ -93,17 +94,41 @@ endpoints:
         name: nature
         description: ''
         required: true
-        example: nihil
+        example: ut
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: x
-      level: 24
-      ability: ut
-      nature: nihil
+      name: ynpxzgei
+      level: 12
+      ability: sapiente
+      nature: ut
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": {
+              "id": 5,
+              "name": "pepe99",
+              "level": "1",
+              "race": "ditto",
+              "nature": "天真",
+              "ability": "惡臭",
+              "skill1": null,
+              "skill2": null,
+              "skill3": null,
+              "skill4": null,
+              "created_at": "2023-09-20 09:24:18",
+              "updated_at": "2023-09-20 09:24:18"
+          },
+          "message": "Created successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -119,7 +144,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 查詢單一寶可夢
+      title: 'Search a Pokemon'
       description: ''
       authenticated: false
       custom: []
@@ -131,12 +156,12 @@ endpoints:
         name: id
         description: 'The ID of the pokemon.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -145,13 +170,14 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"code":200,"data":{"id":5,"name":"\u767e\u8b8a\u602a","level":99,"race":"ditto","nature":"\u7121\u804a\u804a","ability":"\u60e1\u81ed","skill1":"transform","skill2":null,"skill3":null,"skill4":null,"created_at":"2023-08-28 08:19:51","updated_at":"2023-09-05 07:55:34"},"message":"search successfully"}'
+        content: '{"code":200,"data":{"id":1,"user_id":1,"name":"Gengar no.1","level":50,"race":"gengar","nature":"\u52e4\u596e","ability":"\u60e1\u81ed","user":"default","skill1":null,"skill2":null,"skill3":null,"skill4":null,"created_at":"2025-05-26 07:51:56","updated_at":"2025-06-13 06:22:21","image_url":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/94.png"},"message":"search successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
           x-ratelimit-remaining: '58'
-          access-control-allow-origin: '*'
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-allow-credentials: 'true'
         description: null
         custom: []
     responseFields: []
@@ -170,7 +196,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 更新寶可夢
+      title: 'Update a Pokemon'
       description: ''
       authenticated: false
       custom: []
@@ -182,12 +208,12 @@ endpoints:
         name: id
         description: 'The ID of the pokemon.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -195,7 +221,7 @@ endpoints:
         name: name
         description: 'Must be at least 1 character. Must not be greater than 8 characters.'
         required: false
-        example: ikxeipq
+        example: cwzziydu
         type: string
         enumValues: []
         custom: []
@@ -203,7 +229,7 @@ endpoints:
         name: level
         description: 'Must be at least 1. Must not be greater than 100.'
         required: false
-        example: 8
+        example: 21
         type: number
         enumValues: []
         custom: []
@@ -224,10 +250,34 @@ endpoints:
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: ikxeipq
-      level: 8
+      name: cwzziydu
+      level: 21
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": {
+              "id": 5,
+              "name": "pepe99",
+              "level": "11",
+              "race": "ditto",
+              "nature": "creative",
+              "ability": "paitent",
+              "skill1": null,
+              "skill2": null,
+              "skill3": null,
+              "skill4": null,
+              "created_at": "2023-09-20 09:24:18",
+              "updated_at": "2023-09-20 09:24:18"
+          },
+          "message": "Update completed"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -243,7 +293,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 刪除寶可夢
+      title: 'Delete a Pokemon'
       description: ''
       authenticated: false
       custom: []
@@ -255,18 +305,29 @@ endpoints:
         name: id
         description: 'The ID of the pokemon.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": [],
+          "message": "successfully deleted"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -282,7 +343,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 新增性格
+      title: 'Create a nature'
       description: ''
       authenticated: false
       custom: []
@@ -296,16 +357,32 @@ endpoints:
     bodyParameters:
       nature:
         name: nature
-        description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+        description: 'Must be at least 2 characters. Must not be greater than 30 characters.'
         required: true
-        example: ozyjzr
+        example: ot
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      nature: ozyjzr
+      nature: ot
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": {
+              "name": "creative",
+              "updated_at": "2023-09-20T09:46:22.000000Z",
+              "created_at": "2023-09-20T09:46:22.000000Z",
+              "id": 28
+          },
+          "message": "Created successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -322,7 +399,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 修改性格
+      title: 'Update a nature'
       description: ''
       authenticated: false
       custom: []
@@ -345,16 +422,32 @@ endpoints:
     bodyParameters:
       nature:
         name: nature
-        description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+        description: 'Must be at least 2 characters. Must not be greater than 30 characters.'
         required: true
-        example: pgdn
+        example: omhnqxbaikaolwffnp
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      nature: pgdn
+      nature: omhnqxbaikaolwffnp
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": {
+              "id": 28,
+              "name": "creative",
+              "created_at": "2023-09-20T09:46:22.000000Z",
+              "updated_at": "2023-09-20T09:47:23.000000Z"
+          },
+          "message": "Updated successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -370,7 +463,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 新增特性
+      title: 'Create an ability'
       description: ''
       authenticated: false
       custom: []
@@ -384,16 +477,32 @@ endpoints:
     bodyParameters:
       ability:
         name: ability
-        description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+        description: 'Must be at least 2 characters. Must not be greater than 30 characters.'
         required: true
-        example: xu
+        example: wqrxtptxhrzrditrwi
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      ability: xu
+      ability: wqrxtptxhrzrditrwi
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": {
+              "name": "patient",
+              "updated_at": "2023-09-20T09:43:34.000000Z",
+              "created_at": "2023-09-20T09:43:34.000000Z",
+              "id": 270
+          },
+          "message": "Created successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -410,7 +519,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 修改特性
+      title: 'update an ability'
       description: ''
       authenticated: false
       custom: []
@@ -433,16 +542,32 @@ endpoints:
     bodyParameters:
       ability:
         name: ability
-        description: 'Must be at least 2 characters. Must not be greater than 8 characters.'
+        description: 'Must be at least 2 characters. Must not be greater than 30 characters.'
         required: true
-        example: knggt
+        example: qdfb
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      ability: knggt
+      ability: qdfb
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": {
+              "id": 270,
+              "name": "patient",
+              "created_at": "2023-09-20T09:43:34.000000Z",
+              "updated_at": "2023-09-20T09:45:19.000000Z"
+          },
+          "message": "Updated successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -458,7 +583,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 顯示可學習技能
+      title: 'Show learnable skills'
       description: ''
       authenticated: false
       custom: []
@@ -470,12 +595,12 @@ endpoints:
         name: id
         description: 'The ID of the pokemon.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -483,14 +608,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"skill1":"transform"}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
-          access-control-allow-origin: '*'
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-allow-credentials: 'true'
         description: null
         custom: []
     responseFields: []
@@ -508,7 +632,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 顯示已學習技能
+      title: 'Show learned skills'
       description: ''
       authenticated: false
       custom: []
@@ -520,12 +644,12 @@ endpoints:
         name: id
         description: 'The ID of the pokemon.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -533,14 +657,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"code":200,"data":{"skill1":"transform","skill2":null,"skill3":null,"skill4":null},"message":"Search successful"}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-allow-credentials: 'true'
         description: null
         custom: []
     responseFields: []
@@ -558,7 +681,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 學習技能
+      title: 'Learn skills'
       description: ''
       authenticated: false
       custom: []
@@ -570,18 +693,74 @@ endpoints:
         name: id
         description: 'The ID of the pokemon.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      skill1:
+        name: skill1
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        custom: []
+      skill2:
+        name: skill2
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        custom: []
+      skill3:
+        name: skill3
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        custom: []
+      skill4:
+        name: skill4
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        custom: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": {
+              "id": 2,
+              "name": "pepe2",
+              "level": 6,
+              "race": "ditto",
+              "nature": "creative",
+              "ability": "patient",
+              "skill1": "transform",
+              "skill2": null,
+              "skill3": null,
+              "skill4": null,
+              "created_at": "2023-09-17 11:06:10",
+              "updated_at": "2023-09-17 11:15:02"
+          },
+          "message": "Updated successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -591,13 +770,385 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/test
+    uri: api/trade
     metadata:
       groupName: Endpoints
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Initiate a trade'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      sender_pokemon_id:
+        name: sender_pokemon_id
+        description: ''
+        required: true
+        example: eius
+        type: string
+        enumValues: []
+        custom: []
+      receiver_pokemon_id:
+        name: receiver_pokemon_id
+        description: ''
+        required: true
+        example: praesentium
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      sender_pokemon_id: eius
+      receiver_pokemon_id: praesentium
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": {
+              "sender_id": 4,
+              "receiver_id": 1,
+              "sender_pokemon_id": 2,
+              "receiver_pokemon_id": 112,
+              "status": "pending",
+              "updated_at": "2025-06-13T06:19:51.000000Z",
+              "created_at": "2025-06-13T06:19:51.000000Z",
+              "id": 16
+          },
+          "message": "Initiate trade successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/trade
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show a trade'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "code": 200,
+            "data": {
+                "id": 24,
+                "sender_id": 5,
+                "receiver_id": 4,
+                "sender_pokemon_id": 127,
+                "receiver_pokemon_id": 122,
+                "status": "pending",
+                "created_at": "2025-06-14T06:23:54.000000Z",
+                "updated_at": "2025-06-14T06:23:54.000000Z"
+            },
+            "message": ""
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/trade/{id}/accept'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Accept a trade'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the trade.'
+        required: true
+        example: commodi
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      id: commodi
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "code": 200,
+            "data": {
+                "id": 24,
+                "sender_id": 5,
+                "receiver_id": 4,
+                "sender_pokemon_id": 127,
+                "receiver_pokemon_id": 122,
+                "status": "accepted",
+                "created_at": "2025-06-14T06:23:54.000000Z",
+                "updated_at": "2025-06-14T06:25:46.000000Z",
+            },
+            "message": "Trade accepted successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/trade/{id}/reject'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reject a trade'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the trade.'
+        required: true
+        example: libero
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      id: libero
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "code": 200,
+            "data": {
+                "id": 4,
+                "sender_id": 1,
+                "receiver_id": 4,
+                "sender_pokemon_id": 2,
+                "receiver_pokemon_id": 112,
+                "status": "rejected",
+                "created_at": "2025-06-10T06:55:25.000000Z",
+                "updated_at": "2025-06-10T06:56:43.000000Z"
+            },
+            "message": "Trade rejected successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Register a new user'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 1 character. Must not be greater than 16 characters.'
+        required: true
+        example: reeuaanszrhoijyb
+        type: string
+        enumValues: []
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: fisher.oren@example.net
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 4 characters. Must not be greater than 16 characters.'
+        required: true
+        example: 'Jwys?2{qqK'
+        type: string
+        enumValues: []
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: ''
+        required: true
+        example: a
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      name: reeuaanszrhoijyb
+      email: fisher.oren@example.net
+      password: 'Jwys?2{qqK'
+      password_confirmation: a
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 201,
+          "data": "5|DZTNk2mBYpPkew2cxuHJFYmmOXF5nE7yjNyIfjKL",
+          "message": "Register success"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Login
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: genevieve11@example.org
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 4 characters. Must not be greater than 16 characters.'
+        required: true
+        example: IdO!Pa.
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      email: genevieve11@example.org
+      password: IdO!Pa.
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",
+          "message": "Login success"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/oauth/exchange-token
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get user information'
       description: ''
       authenticated: false
       custom: []
@@ -612,6 +1163,418 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/user/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": {
+              "name": "rick",
+              "email": "a@a.com"
+          },
+          "message": "Logout success"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/send_verify
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Resend verification email'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": {
+              "name": "rick",
+              "email": "b@b.com"
+          },
+          "message": "Email send successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/verify/{token}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Execute verification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: earum
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      token: earum
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": [],
+          "message": "Verify success"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/forget_password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send password reset email'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: klein.austin@example.net
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      email: klein.austin@example.net
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": [],
+          "message": "Email send successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/reset_password/{token}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reset password'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: aut
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      token: aut
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: wyatt.okon@example.org
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 4 characters. Must not be greater than 16 characters.'
+        required: true
+        example: 'XrRN1CmX?Z:'
+        type: string
+        enumValues: []
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: ''
+        required: true
+        example: nesciunt
+        type: string
+        enumValues: []
+        custom: []
+      token:
+        name: token
+        description: ''
+        required: true
+        example: nostrum
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      email: wyatt.okon@example.org
+      password: 'XrRN1CmX?Z:'
+      password_confirmation: nesciunt
+      token: nostrum
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": [],
+          "message": "Update password success"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/auth/google
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Heading to Google login page'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 302
+        content: |-
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <meta charset="UTF-8" />
+                  <meta http-equiv="refresh" content="0;url='https://accounts.google.com/o/oauth2/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ'" />
+
+                  <title>Redirecting to https://accounts.google.com/o/oauth2/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ</title>
+              </head>
+              <body>
+                  Redirecting to <a href="https://accounts.google.com/o/oauth2/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ">https://accounts.google.com/o/oauth2/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ</a>.
+              </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          location: 'https://accounts.google.com/o/oauth2/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code&state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-allow-credentials: 'true'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjE4WVlKbXRkWTI2SXRqMkFNZmxuRlE9PSIsInZhbHVlIjoiYktmSFgyL2FCQkxON0pQUkJPK3dFS2NPMjQrVzBlWlU1VEZNQXZkamtkZUF0QjJCc01EYU1hcEZnQmROdTRxTm9LMlJVeXk2N3luMm1zaDJDNGY1eFlSSXFaWGRrRThpeDZpTDdjMUNKd1FHbzZEc3RhZmV0LzVWZTdJYVlsdnUiLCJtYWMiOiJiOTNiYjQ3M2E0NjZiYzBhZjA2YmM5MTY2YzA4ZTYxMDE0YmQyNGRiNWRlZjIzNGZhMjVlYmUxMjU4ZjEwYWFmIiwidGFnIjoiIn0%3D; expires=Sat, 14 Jun 2025 09:44:04 GMT; Max-Age=7200; path=/; domain=127.0.0.1; samesite=lax; laravel_session=5i5KFD88txX6FJ44dQU0zLTxwmt7iLzqVl0HyJtO; expires=Sat, 14 Jun 2025 09:44:04 GMT; Max-Age=7200; path=/; domain=127.0.0.1; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/auth/google/callback
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Google login callback'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 200,
+          "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",
+          "message": "Login success"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/notLogin
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Unauthenticated (handled by middleware redirect)'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "code": 401,
+          "data": [],
+          "message": "Not logged in"
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null

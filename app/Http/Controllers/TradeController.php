@@ -16,7 +16,23 @@ class TradeController extends BaseController
         $this->tradeService = $tradeService;
     }
 
-    // initiate a trade
+    /**
+     * Initiate a trade
+     * @response{
+     * "code": 201,
+     * "data": {
+     *     "sender_id": 4,
+     *     "receiver_id": 1,
+     *     "sender_pokemon_id": 2,
+     *     "receiver_pokemon_id": 112,
+     *     "status": "pending",
+     *     "updated_at": "2025-06-13T06:19:51.000000Z",
+     *     "created_at": "2025-06-13T06:19:51.000000Z",
+     *     "id": 16
+     * },
+     * "message": "Initiate trade successfully"
+     * }
+     */
     public function store(StoreTradeRequest $request)
     {
         $senderPokemon = Pokemon::find($request->sender_pokemon_id);
@@ -60,7 +76,23 @@ class TradeController extends BaseController
         }
     }
 
-    //show a trade
+    /**
+     * Show a trade
+     * @response{
+     *   "code": 200,
+     *   "data": {
+     *       "id": 24,
+     *       "sender_id": 5,
+     *       "receiver_id": 4,
+     *       "sender_pokemon_id": 127,
+     *       "receiver_pokemon_id": 122,
+     *       "status": "pending",
+     *       "created_at": "2025-06-14T06:23:54.000000Z",
+     *       "updated_at": "2025-06-14T06:23:54.000000Z"
+     *   },
+     *   "message": ""
+     * }
+     */
     public function show()
     {
         $userId = Auth::id();
@@ -74,7 +106,23 @@ class TradeController extends BaseController
         return $this->res(200, $trade, '');
     }
 
-    //accept trade
+    /**
+     * Accept a trade
+     * @response{
+     *   "code": 200,
+     *   "data": {
+     *       "id": 24,
+     *       "sender_id": 5,
+     *       "receiver_id": 4,
+     *       "sender_pokemon_id": 127,
+     *       "receiver_pokemon_id": 122,
+     *       "status": "accepted",
+     *       "created_at": "2025-06-14T06:23:54.000000Z",
+     *       "updated_at": "2025-06-14T06:25:46.000000Z",
+     *   },
+     *   "message": "Trade accepted successfully"
+     * }
+     */
     public function accept($id)
     {
         $userId = Auth::id();
@@ -90,7 +138,23 @@ class TradeController extends BaseController
         return $this->res(200, $trade, 'Trade completed successfully');
     }
 
-    //reject trade
+    /**
+     * Reject a trade
+     * @response{
+     *   "code": 200,
+     *   "data": {
+     *       "id": 4,
+     *       "sender_id": 1,
+     *       "receiver_id": 4,
+     *       "sender_pokemon_id": 2,
+     *       "receiver_pokemon_id": 112,
+     *       "status": "rejected",
+     *       "created_at": "2025-06-10T06:55:25.000000Z",
+     *       "updated_at": "2025-06-10T06:56:43.000000Z"
+     *   },
+     *   "message": "Trade rejected successfully"
+     * }
+     */
     public function reject($id)
     {
         $userId = Auth::id();

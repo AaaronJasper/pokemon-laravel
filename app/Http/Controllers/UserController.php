@@ -20,7 +20,7 @@ use App\Jobs\SendVerificationEmailJob;
 class UserController extends BaseController
 {
     /**
-     *註冊新用戶
+     * Register a new user
      * @response{
      * "code": 201,
      * "data": "5|DZTNk2mBYpPkew2cxuHJFYmmOXF5nE7yjNyIfjKL",
@@ -48,7 +48,7 @@ class UserController extends BaseController
         return $this->res(201, ['id' => $user->id, 'user' => $user->name, 'token' => $token], "Register success");
     }
     /**
-     *登入用戶
+     * Login 
      * @response{
      * "code": 200,
      * "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",
@@ -75,7 +75,7 @@ class UserController extends BaseController
         }
     }
     /**
-     *登出用戶
+     * Logout
      * @response{
      * "code": 200,
      * "data": {
@@ -96,7 +96,7 @@ class UserController extends BaseController
         return $this->res(200, $data, "Logout success");
     }
     /**
-     * 拿取使用者資訊
+     * Get user information
      */
     public function exchange_token(Request $request)
     {
@@ -112,7 +112,7 @@ class UserController extends BaseController
         return $this->res(200, ['id' => $user->id, 'user' => $user->name, 'token' => $token, 'isVerify' => $user->email_verified_at !== null], "Login success");
     }
     /**
-     *再次寄送驗證信
+     * Resend verification email
      * @response{
      * "code": 200,
      * "data": {
@@ -135,7 +135,7 @@ class UserController extends BaseController
         return $this->res(200, $data, "Email send successfully");
     }
     /**
-     *執行驗證
+     * Execute verification
      * @response{
      * "code": 200,
      * "data": [],
@@ -159,7 +159,7 @@ class UserController extends BaseController
         return $this->res(200, [], "Verify success");
     }
     /**
-     *發送重設密碼信
+     * Send password reset email 
      * @response{
      * "code": 200,
      * "data": [],
@@ -187,7 +187,7 @@ class UserController extends BaseController
         return $this->res(200, [], "Email send successfully");
     }
     /**
-     *執行重設密碼
+     * Reset password
      * @response{
      * "code": 200,
      * "data": [],
@@ -217,7 +217,7 @@ class UserController extends BaseController
         return $this->res(200, [], "Update password success");
     }
     /**
-     *未登入(讓middleware轉址)
+     * Unauthenticated (handled by middleware redirect)
      * @response{
      * "code": 401,
      * "data": [],

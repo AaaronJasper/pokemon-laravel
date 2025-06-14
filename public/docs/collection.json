@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "26e1af4a-68d1-4d08-94df-84ccb981c3ae",
+        "_postman_id": "cf7145b5-4a75-492e-8caa-a8fca45d6459",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,7 +20,7 @@
             "description": "",
             "item": [
                 {
-                    "name": "\u67e5\u8a62\u5bf6\u53ef\u5922",
+                    "name": "Search all Pokemons",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -66,17 +66,21 @@
                                 },
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "value": "http:\/\/localhost:5173"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"code\":200,\"data\":{\"data\":[{\"id\":5,\"name\":\"\\u767e\\u8b8a\\u602a\",\"level\":99,\"race\":\"ditto\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":\"transform\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-28 08:19:51\",\"updated_at\":\"2023-09-05 07:55:34\"},{\"id\":7,\"name\":\"pepe\",\"level\":90,\"race\":\"venusaur\",\"nature\":\"\\u5929\\u771f\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":\"grass-knot\",\"skill2\":\"sunny-day\",\"skill3\":\"nature-power\",\"skill4\":\"cut\",\"created_at\":\"2023-08-29 03:42:19\",\"updated_at\":\"2023-08-30 06:22:12\"},{\"id\":8,\"name\":\"pepe\",\"level\":99,\"race\":\"venusaur\",\"nature\":\"\\u5927\\u81bd\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-29 03:52:25\",\"updated_at\":\"2023-08-29 05:00:59\"},{\"id\":9,\"name\":\"pepe\",\"level\":66,\"race\":\"venusaur\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u4e09\\u500b\\u5b57\\u8d85\\u7d1a\\u53ef\\u60b2\",\"skill1\":\"cut\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-29 04:22:09\",\"updated_at\":\"2023-09-01 08:09:16\"},{\"id\":11,\"name\":\"skr\",\"level\":66,\"race\":\"venusaur\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u4e09\\u500b\\u5b57\\u8d85\\u7d1a\\u53ef\\u60b2\",\"skill1\":\"nature-power\",\"skill2\":\"sunny-day\",\"skill3\":\"growl\",\"skill4\":\"cut\",\"created_at\":\"2023-09-01 03:49:17\",\"updated_at\":\"2023-09-01 07:21:21\"}]},\"message\":\"search successfully\"}",
+                            "body": "{\"code\":200,\"data\":{\"data\":[{\"id\":1,\"user_id\":1,\"name\":\"Gengar no.1\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-06-13 06:22:21\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":2,\"user_id\":4,\"name\":\"Gengar no.2\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-06-13 06:20:33\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":3,\"user_id\":1,\"name\":\"Gengar no.3\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":4,\"user_id\":1,\"name\":\"Gengar no.4\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":5,\"user_id\":1,\"name\":\"Gengar no.5\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":6,\"user_id\":1,\"name\":\"Gengar no.6\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":7,\"user_id\":1,\"name\":\"Gengar no.7\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":8,\"user_id\":1,\"name\":\"Gengar no.8\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":9,\"user_id\":1,\"name\":\"Gengar no.9\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":10,\"user_id\":1,\"name\":\"Gengar no.10\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":11,\"user_id\":1,\"name\":\"Gengar no.11\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":12,\"user_id\":1,\"name\":\"Gengar no.12\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":13,\"user_id\":1,\"name\":\"Gengar no.13\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":14,\"user_id\":1,\"name\":\"Gengar no.14\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":15,\"user_id\":1,\"name\":\"Gengar no.15\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":16,\"user_id\":1,\"name\":\"Gengar no.16\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":17,\"user_id\":1,\"name\":\"Gengar no.17\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":18,\"user_id\":1,\"name\":\"Gengar no.18\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":19,\"user_id\":1,\"name\":\"Gengar no.19\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":20,\"user_id\":1,\"name\":\"Gengar no.20\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":21,\"user_id\":1,\"name\":\"Gengar no.21\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":22,\"user_id\":1,\"name\":\"Gengar no.22\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":23,\"user_id\":1,\"name\":\"Gengar no.23\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":24,\"user_id\":1,\"name\":\"Gengar no.24\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":25,\"user_id\":1,\"name\":\"Gengar no.25\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":26,\"user_id\":1,\"name\":\"Gengar no.26\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":27,\"user_id\":1,\"name\":\"Gengar no.27\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":28,\"user_id\":1,\"name\":\"Gengar no.28\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":29,\"user_id\":1,\"name\":\"Gengar no.29\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":30,\"user_id\":1,\"name\":\"Gengar no.30\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":31,\"user_id\":1,\"name\":\"Gengar no.31\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":32,\"user_id\":1,\"name\":\"Gengar no.32\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":33,\"user_id\":1,\"name\":\"Gengar no.33\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":34,\"user_id\":1,\"name\":\"Gengar no.34\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":35,\"user_id\":1,\"name\":\"Gengar no.35\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":36,\"user_id\":1,\"name\":\"Gengar no.36\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":37,\"user_id\":1,\"name\":\"Gengar no.37\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":38,\"user_id\":1,\"name\":\"Gengar no.38\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":39,\"user_id\":1,\"name\":\"Gengar no.39\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":40,\"user_id\":1,\"name\":\"Gengar no.40\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":41,\"user_id\":1,\"name\":\"Gengar no.41\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":42,\"user_id\":1,\"name\":\"Gengar no.42\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":43,\"user_id\":1,\"name\":\"Gengar no.43\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":44,\"user_id\":1,\"name\":\"Gengar no.44\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":45,\"user_id\":1,\"name\":\"Gengar no.45\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":46,\"user_id\":1,\"name\":\"Gengar no.46\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":47,\"user_id\":1,\"name\":\"Gengar no.47\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":48,\"user_id\":1,\"name\":\"Gengar no.48\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":49,\"user_id\":1,\"name\":\"Gengar no.49\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":50,\"user_id\":1,\"name\":\"Gengar no.50\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":51,\"user_id\":1,\"name\":\"Gengar no.51\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":52,\"user_id\":1,\"name\":\"Gengar no.52\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":53,\"user_id\":1,\"name\":\"Gengar no.53\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":54,\"user_id\":1,\"name\":\"Gengar no.54\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":55,\"user_id\":1,\"name\":\"Gengar no.55\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":56,\"user_id\":1,\"name\":\"Gengar no.56\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":57,\"user_id\":1,\"name\":\"Gengar no.57\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":58,\"user_id\":1,\"name\":\"Gengar no.58\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":59,\"user_id\":1,\"name\":\"Gengar no.59\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":60,\"user_id\":1,\"name\":\"Gengar no.60\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":61,\"user_id\":1,\"name\":\"Gengar no.61\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":62,\"user_id\":1,\"name\":\"Gengar no.62\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":63,\"user_id\":1,\"name\":\"Gengar no.63\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":64,\"user_id\":1,\"name\":\"Gengar no.64\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":65,\"user_id\":1,\"name\":\"Gengar no.65\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":66,\"user_id\":1,\"name\":\"Gengar no.66\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":67,\"user_id\":1,\"name\":\"Gengar no.67\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":68,\"user_id\":1,\"name\":\"Gengar no.68\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":69,\"user_id\":1,\"name\":\"Gengar no.69\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":70,\"user_id\":1,\"name\":\"Gengar no.70\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":71,\"user_id\":1,\"name\":\"Gengar no.71\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":72,\"user_id\":1,\"name\":\"Gengar no.72\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":73,\"user_id\":1,\"name\":\"Gengar no.73\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":74,\"user_id\":1,\"name\":\"Gengar no.74\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":75,\"user_id\":1,\"name\":\"Gengar no.75\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":76,\"user_id\":1,\"name\":\"Gengar no.76\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":77,\"user_id\":1,\"name\":\"Gengar no.77\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":78,\"user_id\":1,\"name\":\"Gengar no.78\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":79,\"user_id\":1,\"name\":\"Gengar no.79\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":80,\"user_id\":1,\"name\":\"Gengar no.80\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":81,\"user_id\":1,\"name\":\"Gengar no.81\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":82,\"user_id\":1,\"name\":\"Gengar no.82\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":83,\"user_id\":1,\"name\":\"Gengar no.83\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":84,\"user_id\":1,\"name\":\"Gengar no.84\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":85,\"user_id\":1,\"name\":\"Gengar no.85\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":86,\"user_id\":1,\"name\":\"Gengar no.86\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":87,\"user_id\":1,\"name\":\"Gengar no.87\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":88,\"user_id\":1,\"name\":\"Gengar no.88\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":89,\"user_id\":1,\"name\":\"Gengar no.89\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":90,\"user_id\":1,\"name\":\"Gengar no.90\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":91,\"user_id\":1,\"name\":\"Gengar no.91\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":92,\"user_id\":1,\"name\":\"Gengar no.92\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":93,\"user_id\":1,\"name\":\"Gengar no.93\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":94,\"user_id\":1,\"name\":\"Gengar no.94\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":95,\"user_id\":1,\"name\":\"Gengar no.95\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":96,\"user_id\":1,\"name\":\"Gengar no.96\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":97,\"user_id\":1,\"name\":\"Gengar no.97\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-05-26 07:51:56\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":98,\"user_id\":4,\"name\":\"Gengar no.98\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"aaaa\",\"skill1\":\"mega-punch\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-06-12 11:05:12\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},{\"id\":108,\"user_id\":1,\"name\":\"tariff\",\"level\":99,\"race\":\"charizard\",\"nature\":\"\\u5929\\u771f\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-27 06:56:16\",\"updated_at\":\"2025-05-27 06:56:16\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/6.png\"},{\"id\":109,\"user_id\":1,\"name\":\"tariff2\",\"level\":98,\"race\":\"incineroar\",\"nature\":\"\\u5929\\u771f\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-27 06:56:40\",\"updated_at\":\"2025-05-27 06:56:40\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/727.png\"},{\"id\":110,\"user_id\":1,\"name\":\"buzzwole\",\"level\":89,\"race\":\"buzzwole\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-04 05:40:19\",\"updated_at\":\"2025-06-04 05:41:49\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/794.png\"},{\"id\":111,\"user_id\":1,\"name\":\"guzzlord\",\"level\":77,\"race\":\"guzzlord\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-04 05:42:19\",\"updated_at\":\"2025-06-04 05:42:19\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/799.png\"},{\"id\":112,\"user_id\":4,\"name\":\"mew\",\"level\":48,\"race\":\"mew\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-04 06:04:06\",\"updated_at\":\"2025-06-13 06:22:21\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/151.png\"},{\"id\":113,\"user_id\":4,\"name\":\"ralts\",\"level\":9,\"race\":\"gardevoir\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-04 06:08:40\",\"updated_at\":\"2025-06-04 06:19:25\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/282.png\"},{\"id\":114,\"user_id\":4,\"name\":\"raltssss\",\"level\":22,\"race\":\"kirlia\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-04 06:19:01\",\"updated_at\":\"2025-06-04 06:37:21\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/281.png\"},{\"id\":115,\"user_id\":4,\"name\":\"silvally\",\"level\":44,\"race\":\"silvally\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 06:12:34\",\"updated_at\":\"2025-06-06 06:12:34\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/773.png\"},{\"id\":116,\"user_id\":4,\"name\":\"necrozma\",\"level\":88,\"race\":\"necrozma\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 06:13:10\",\"updated_at\":\"2025-06-06 06:13:10\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/800.png\"},{\"id\":118,\"user_id\":3,\"name\":\"palkia\",\"level\":88,\"race\":\"palkia\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"\\u738b\\u59c6\\u65af\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 07:31:20\",\"updated_at\":\"2025-06-06 07:31:20\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/484.png\"},{\"id\":119,\"user_id\":3,\"name\":\"zeraora\",\"level\":90,\"race\":\"zeraora\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"\\u738b\\u59c6\\u65af\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 07:40:31\",\"updated_at\":\"2025-06-06 07:40:31\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/807.png\"},{\"id\":120,\"user_id\":4,\"name\":\"gallade\",\"level\":89,\"race\":\"gardevoir\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:42:14\",\"updated_at\":\"2025-06-12 10:59:57\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/282.png\"},{\"id\":121,\"user_id\":4,\"name\":\"snorlax\",\"level\":44,\"race\":\"snorlax\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:42:53\",\"updated_at\":\"2025-06-06 12:42:53\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/143.png\"},{\"id\":122,\"user_id\":5,\"name\":\"celebi\",\"level\":33,\"race\":\"celebi\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"bbbb\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:43:53\",\"updated_at\":\"2025-06-14 06:25:46\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/251.png\"},{\"id\":123,\"user_id\":4,\"name\":\"guzzlord\",\"level\":33,\"race\":\"guzzlord\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:48:20\",\"updated_at\":\"2025-06-06 12:48:20\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/799.png\"},{\"id\":124,\"user_id\":1,\"name\":\"garchomp\",\"level\":77,\"race\":\"garchomp\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:49:00\",\"updated_at\":\"2025-06-12 11:05:12\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/445.png\"},{\"id\":125,\"user_id\":4,\"name\":\"weezing\",\"level\":87,\"race\":\"weezing\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:49:27\",\"updated_at\":\"2025-06-13 10:13:53\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/110.png\"},{\"id\":126,\"user_id\":4,\"name\":\"alakazam\",\"level\":44,\"race\":\"alakazam\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-06 12:50:37\",\"updated_at\":\"2025-06-06 12:50:37\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/65.png\"},{\"id\":127,\"user_id\":4,\"name\":\"nihilego\",\"level\":66,\"race\":\"nihilego\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"aaaa\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-10 05:25:46\",\"updated_at\":\"2025-06-14 06:25:46\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/793.png\"},{\"id\":128,\"user_id\":5,\"name\":\"silvally\",\"level\":88,\"race\":\"silvally\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"bbbb\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-10 05:26:43\",\"updated_at\":\"2025-06-10 05:26:43\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/773.png\"},{\"id\":129,\"user_id\":5,\"name\":\"darkrai\",\"level\":90,\"race\":\"darkrai\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"bbbb\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-10 05:28:44\",\"updated_at\":\"2025-06-10 05:28:44\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/491.png\"},{\"id\":130,\"user_id\":5,\"name\":\"lunala\",\"level\":34,\"race\":\"lunala\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"bbbb\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-10 05:30:01\",\"updated_at\":\"2025-06-13 10:13:53\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/792.png\"},{\"id\":131,\"user_id\":5,\"name\":\"rayquaza\",\"level\":6,\"race\":\"rayquaza\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"bbbb\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-10 05:31:46\",\"updated_at\":\"2025-06-10 05:31:46\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/384.png\"},{\"id\":132,\"user_id\":1,\"name\":\"wugtrio\",\"level\":90,\"race\":\"wugtrio\",\"nature\":\"creative\",\"ability\":\"patient\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-06-11 06:32:48\",\"updated_at\":\"2025-06-12 10:59:57\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/961.png\"}]},\"message\":\"search successfully\"}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "\u65b0\u589e\u5bf6\u53ef\u5922",
+                    "name": "Store a Pokemon",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -97,17 +101,24 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"x\",\"level\":24,\"ability\":\"ut\",\"nature\":\"nihil\"}"
+                            "raw": "{\"name\":\"ynpxzgei\",\"level\":12,\"ability\":\"sapiente\",\"nature\":\"ut\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"id\": 5,\n    \"name\": \"pepe99\",\n    \"level\": \"1\",\n    \"race\": \"ditto\",\n    \"nature\": \"\u5929\u771f\",\n    \"ability\": \"\u60e1\u81ed\",\n    \"skill1\": null,\n    \"skill2\": null,\n    \"skill3\": null,\n    \"skill4\": null,\n    \"created_at\": \"2023-09-20 09:24:18\",\n    \"updated_at\": \"2023-09-20 09:24:18\"\n},\n\"message\": \"Created successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u67e5\u8a62\u55ae\u4e00\u5bf6\u53ef\u5922",
+                    "name": "Search a Pokemon",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -118,7 +129,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "1",
                                     "description": "The ID of the pokemon."
                                 }
                             ]
@@ -161,17 +172,21 @@
                                 },
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "value": "http:\/\/localhost:5173"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"code\":200,\"data\":{\"id\":5,\"name\":\"\\u767e\\u8b8a\\u602a\",\"level\":99,\"race\":\"ditto\",\"nature\":\"\\u7121\\u804a\\u804a\",\"ability\":\"\\u60e1\\u81ed\",\"skill1\":\"transform\",\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2023-08-28 08:19:51\",\"updated_at\":\"2023-09-05 07:55:34\"},\"message\":\"search successfully\"}",
+                            "body": "{\"code\":200,\"data\":{\"id\":1,\"user_id\":1,\"name\":\"Gengar no.1\",\"level\":50,\"race\":\"gengar\",\"nature\":\"\\u52e4\\u596e\",\"ability\":\"\\u60e1\\u81ed\",\"user\":\"default\",\"skill1\":null,\"skill2\":null,\"skill3\":null,\"skill4\":null,\"created_at\":\"2025-05-26 07:51:56\",\"updated_at\":\"2025-06-13 06:22:21\",\"image_url\":\"https:\\\/\\\/raw.githubusercontent.com\\\/PokeAPI\\\/sprites\\\/master\\\/sprites\\\/pokemon\\\/94.png\"},\"message\":\"search successfully\"}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "\u66f4\u65b0\u5bf6\u53ef\u5922",
+                    "name": "Update a Pokemon",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -182,7 +197,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "1",
                                     "description": "The ID of the pokemon."
                                 }
                             ]
@@ -200,17 +215,24 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ikxeipq\",\"level\":8}"
+                            "raw": "{\"name\":\"cwzziydu\",\"level\":21}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"id\": 5,\n    \"name\": \"pepe99\",\n    \"level\": \"11\",\n    \"race\": \"ditto\",\n    \"nature\": \"creative\",\n    \"ability\": \"paitent\",\n    \"skill1\": null,\n    \"skill2\": null,\n    \"skill3\": null,\n    \"skill4\": null,\n    \"created_at\": \"2023-09-20 09:24:18\",\n    \"updated_at\": \"2023-09-20 09:24:18\"\n},\n\"message\": \"Update completed\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u522a\u9664\u5bf6\u53ef\u5922",
+                    "name": "Delete a Pokemon",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -221,7 +243,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "1",
                                     "description": "The ID of the pokemon."
                                 }
                             ]
@@ -243,10 +265,17 @@
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": [],\n\"message\": \"successfully deleted\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u65b0\u589e\u6027\u683c",
+                    "name": "Create a nature",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -267,17 +296,24 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nature\":\"ozyjzr\"}"
+                            "raw": "{\"nature\":\"ot\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"name\": \"creative\",\n    \"updated_at\": \"2023-09-20T09:46:22.000000Z\",\n    \"created_at\": \"2023-09-20T09:46:22.000000Z\",\n    \"id\": 28\n},\n\"message\": \"Created successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u4fee\u6539\u6027\u683c",
+                    "name": "Update a nature",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -306,17 +342,24 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nature\":\"pgdn\"}"
+                            "raw": "{\"nature\":\"omhnqxbaikaolwffnp\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": {\n    \"id\": 28,\n    \"name\": \"creative\",\n    \"created_at\": \"2023-09-20T09:46:22.000000Z\",\n    \"updated_at\": \"2023-09-20T09:47:23.000000Z\"\n},\n\"message\": \"Updated successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u65b0\u589e\u7279\u6027",
+                    "name": "Create an ability",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -337,17 +380,24 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ability\":\"xu\"}"
+                            "raw": "{\"ability\":\"wqrxtptxhrzrditrwi\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"name\": \"patient\",\n    \"updated_at\": \"2023-09-20T09:43:34.000000Z\",\n    \"created_at\": \"2023-09-20T09:43:34.000000Z\",\n    \"id\": 270\n},\n\"message\": \"Created successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u4fee\u6539\u7279\u6027",
+                    "name": "update an ability",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -376,17 +426,24 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ability\":\"knggt\"}"
+                            "raw": "{\"ability\":\"qdfb\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": {\n    \"id\": 270,\n    \"name\": \"patient\",\n    \"created_at\": \"2023-09-20T09:43:34.000000Z\",\n    \"updated_at\": \"2023-09-20T09:45:19.000000Z\"\n},\n\"message\": \"Updated successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "\u986f\u793a\u53ef\u5b78\u7fd2\u6280\u80fd",
+                    "name": "Show learnable skills",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -397,7 +454,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "1",
                                     "description": "The ID of the pokemon."
                                 }
                             ]
@@ -425,6 +482,628 @@
                                 {
                                     "key": "cache-control",
                                     "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:5173"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show learned skills",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id\/skill",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/skill",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:5173"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Learn skills",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pokemon\/:id\/skill",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/skill",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the pokemon."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"id\": 2,\n    \"name\": \"pepe2\",\n    \"level\": 6,\n    \"race\": \"ditto\",\n    \"nature\": \"creative\",\n    \"ability\": \"patient\",\n    \"skill1\": \"transform\",\n    \"skill2\": null,\n    \"skill3\": null,\n    \"skill4\": null,\n    \"created_at\": \"2023-09-17 11:06:10\",\n    \"updated_at\": \"2023-09-17 11:15:02\"\n},\n\"message\": \"Updated successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Initiate a trade",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/trade",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/trade"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"sender_pokemon_id\":\"eius\",\"receiver_pokemon_id\":\"praesentium\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"sender_id\": 4,\n    \"receiver_id\": 1,\n    \"sender_pokemon_id\": 2,\n    \"receiver_pokemon_id\": 112,\n    \"status\": \"pending\",\n    \"updated_at\": \"2025-06-13T06:19:51.000000Z\",\n    \"created_at\": \"2025-06-13T06:19:51.000000Z\",\n    \"id\": 16\n},\n\"message\": \"Initiate trade successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show a trade",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/trade",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/trade"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"code\": 200,\n  \"data\": {\n      \"id\": 24,\n      \"sender_id\": 5,\n      \"receiver_id\": 4,\n      \"sender_pokemon_id\": 127,\n      \"receiver_pokemon_id\": 122,\n      \"status\": \"pending\",\n      \"created_at\": \"2025-06-14T06:23:54.000000Z\",\n      \"updated_at\": \"2025-06-14T06:23:54.000000Z\"\n  },\n  \"message\": \"\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Accept a trade",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/trade\/:id\/accept",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/trade\/:id\/accept",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "commodi",
+                                    "description": "The ID of the trade."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"code\": 200,\n  \"data\": {\n      \"id\": 24,\n      \"sender_id\": 5,\n      \"receiver_id\": 4,\n      \"sender_pokemon_id\": 127,\n      \"receiver_pokemon_id\": 122,\n      \"status\": \"accepted\",\n      \"created_at\": \"2025-06-14T06:23:54.000000Z\",\n      \"updated_at\": \"2025-06-14T06:25:46.000000Z\",\n  },\n  \"message\": \"Trade accepted successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Reject a trade",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/trade\/:id\/reject",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/trade\/:id\/reject",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "libero",
+                                    "description": "The ID of the trade."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"code\": 200,\n  \"data\": {\n      \"id\": 4,\n      \"sender_id\": 1,\n      \"receiver_id\": 4,\n      \"sender_pokemon_id\": 2,\n      \"receiver_pokemon_id\": 112,\n      \"status\": \"rejected\",\n      \"created_at\": \"2025-06-10T06:55:25.000000Z\",\n      \"updated_at\": \"2025-06-10T06:56:43.000000Z\"\n  },\n  \"message\": \"Trade rejected successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Register a new user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"reeuaanszrhoijyb\",\"email\":\"fisher.oren@example.net\",\"password\":\"Jwys?2{qqK\",\"password_confirmation\":\"a\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 201,\n\"data\": \"5|DZTNk2mBYpPkew2cxuHJFYmmOXF5nE7yjNyIfjKL\",\n\"message\": \"Register success\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"genevieve11@example.org\",\"password\":\"IdO!Pa.\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": \"2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q\",\n\"message\": \"Login success\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get user information",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/oauth\/exchange-token",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/oauth\/exchange-token"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/logout"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": {\n    \"name\": \"rick\",\n    \"email\": \"a@a.com\"\n},\n\"message\": \"Logout success\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Resend verification email",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/send_verify",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/send_verify"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": {\n    \"name\": \"rick\",\n    \"email\": \"b@b.com\"\n},\n\"message\": \"Email send successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Execute verification",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/verify\/:token",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/verify\/:token",
+                            "variable": [
+                                {
+                                    "id": "token",
+                                    "key": "token",
+                                    "value": "earum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": [],\n\"message\": \"Verify success\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Send password reset email",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/forget_password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/forget_password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"klein.austin@example.net\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": [],\n\"message\": \"Email send successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Reset password",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/reset_password\/:token",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/reset_password\/:token",
+                            "variable": [
+                                {
+                                    "id": "token",
+                                    "key": "token",
+                                    "value": "aut",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"wyatt.okon@example.org\",\"password\":\"XrRN1CmX?Z:\",\"password_confirmation\":\"nesciunt\",\"token\":\"nostrum\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 200,\n\"data\": [],\n\"message\": \"Update password success\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Heading to Google login page",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/google",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/google"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "location",
+                                    "value": "https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code&state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ"
                                 },
                                 {
                                     "key": "content-type",
@@ -440,31 +1119,31 @@
                                 },
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "value": "http:\/\/localhost:5173"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IjE4WVlKbXRkWTI2SXRqMkFNZmxuRlE9PSIsInZhbHVlIjoiYktmSFgyL2FCQkxON0pQUkJPK3dFS2NPMjQrVzBlWlU1VEZNQXZkamtkZUF0QjJCc01EYU1hcEZnQmROdTRxTm9LMlJVeXk2N3luMm1zaDJDNGY1eFlSSXFaWGRrRThpeDZpTDdjMUNKd1FHbzZEc3RhZmV0LzVWZTdJYVlsdnUiLCJtYWMiOiJiOTNiYjQ3M2E0NjZiYzBhZjA2YmM5MTY2YzA4ZTYxMDE0YmQyNGRiNWRlZjIzNGZhMjVlYmUxMjU4ZjEwYWFmIiwidGFnIjoiIn0%3D; expires=Sat, 14 Jun 2025 09:44:04 GMT; Max-Age=7200; path=\/; domain=127.0.0.1; samesite=lax; laravel_session=5i5KFD88txX6FJ44dQU0zLTxwmt7iLzqVl0HyJtO; expires=Sat, 14 Jun 2025 09:44:04 GMT; Max-Age=7200; path=\/; domain=127.0.0.1; httponly; samesite=lax"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"skill1\":\"transform\"}",
+                            "code": 302,
+                            "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url='https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ'\" \/>\n\n        <title>Redirecting to https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ\">https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=540342781577-hn3hadfdg0oda91gm8gmv1iu33tahkae.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=eHuq7RXzrc552s4mt2qXIgrCjLP5Mj1M1M862QRJ<\/a>.\n    <\/body>\n<\/html>",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "\u986f\u793a\u5df2\u5b78\u7fd2\u6280\u80fd",
+                    "name": "Google login callback",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/pokemon\/:id\/skill",
+                            "path": "api\/auth\/google\/callback",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/skill",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "5",
-                                    "description": "The ID of the pokemon."
-                                }
-                            ]
+                            "raw": "{{baseUrl}}\/api\/auth\/google\/callback"
                         },
                         "method": "GET",
                         "header": [
@@ -485,52 +1164,23 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
+                            "header": [],
                             "code": 200,
-                            "body": "{\"code\":200,\"data\":{\"skill1\":\"transform\",\"skill2\":null,\"skill3\":null,\"skill4\":null},\"message\":\"Search successful\"}",
+                            "body": "{\n\"code\": 200,\n\"data\": \"2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q\",\n\"message\": \"Login success\"\n}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "\u5b78\u7fd2\u6280\u80fd",
+                    "name": "Unauthenticated (handled by middleware redirect)",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/pokemon\/:id\/skill",
+                            "path": "api\/notLogin",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/pokemon\/:id\/skill",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "5",
-                                    "description": "The ID of the pokemon."
-                                }
-                            ]
+                            "raw": "{{baseUrl}}\/api\/notLogin"
                         },
-                        "method": "POST",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -547,35 +1197,14 @@
                             "type": "noauth"
                         }
                     },
-                    "response": []
-                },
-                {
-                    "name": "POST api\/test",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/test",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/test"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"code\": 401,\n\"data\": [],\n\"message\": \"Not logged in\"\n}",
+                            "name": ""
                         }
-                    },
-                    "response": []
+                    ]
                 }
             ]
         }
