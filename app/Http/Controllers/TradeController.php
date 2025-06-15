@@ -184,7 +184,43 @@ class TradeController extends BaseController
      *             "receiver_pokemon_id": 124,
      *             "status": "accepted",
      *             "created_at": "2025-06-12T11:01:37.000000Z",
-     *             "updated_at": "2025-06-12T11:05:12.000000Z"
+     *             "updated_at": "2025-06-12T11:05:12.000000Z",
+     *             "sender_pokemon": {
+     *                 "id": 98,
+     *                 "name": "Gengar no.98",
+     *                 "level": 50,
+     *                 "race": "gengar",
+     *                 "nature_id": 1,
+     *                 "ability_id": 1,
+     *                 "status": 1,
+     *                 "created_at": "2025-05-26T07:51:56.000000Z",
+     *                 "updated_at": "2025-06-12T11:05:12.000000Z",
+     *                 "skill1": "mega-punch",
+     *                 "skill2": null,
+     *                 "skill3": null,
+     *                 "skill4": null,
+     *                 "user_id": 4,
+     *                 "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+     *                 "is_trading": 0
+     *             },
+     *             "receiver_pokemon": {
+     *                 "id": 124,
+     *                 "name": "garchomp",
+     *                 "level": 77,
+     *                 "race": "garchomp",
+     *                 "nature_id": 26,
+     *                 "ability_id": 267,
+     *                 "status": 1,
+     *                 "created_at": "2025-06-06T12:49:00.000000Z",
+     *                 "updated_at": "2025-06-12T11:05:12.000000Z",
+     *                 "skill1": null,
+     *                 "skill2": null,
+     *                 "skill3": null,
+     *                 "skill4": null,
+     *                 "user_id": 1,
+     *                 "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png",
+     *                 "is_trading": 0
+     *             }
      *         }
      *     ],
      *     "message": "Successfully retrieved 1 accepted trades."
