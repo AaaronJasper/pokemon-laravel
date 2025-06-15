@@ -39,6 +39,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get("trade", [TradeController::class, 'show']);
     Route::put("trade/{id}/accept", [TradeController::class, 'accept']);
     Route::put("trade/{id}/reject", [TradeController::class, 'reject']);
+    Route::get("trade/history", [TradeController::class, 'history']);
 });
 //用戶註冊
 Route::post("user/register", [UserController::class, 'register']);

@@ -31,6 +31,19 @@ class TradeService
 
         return $trade;
     }
+    
+    //find the trade accompolished
+    public function findAccomplishedTrade($userId)
+    {
+        $trade = Trade::where('status', 'accepted')
+            ->where(function ($query) use ($userId) {
+                $query->where('sender_id', $userId)
+                    ->orWhere('receiver_id', $userId);
+            })
+            ->get();
+
+        return $trade;
+    }
 
     //store new Trade
     public function createNewTrade($userId, $senderPokemon, $receiverPokemon)

@@ -155,7 +155,7 @@ class TradeController extends BaseController
      *   "message": "Trade rejected successfully"
      * }
      */
-    public function reject($id)
+    public function reject()
     {
         $userId = Auth::id();
 
@@ -168,5 +168,33 @@ class TradeController extends BaseController
         $this->tradeService->rejectTrade($trade);
 
         return $this->res(200, $trade, 'Trade rejected successfully');
+    }
+
+    /**
+     * Show all accepted trades
+     *
+     * @response {
+     *     "code": 200,
+     *     "data": [
+     *         {
+     *             "id": 8,
+     *             "sender_id": 1,
+     *             "receiver_id": 4,
+     *             "sender_pokemon_id": 98,
+     *             "receiver_pokemon_id": 124,
+     *             "status": "accepted",
+     *             "created_at": "2025-06-12T11:01:37.000000Z",
+     *             "updated_at": "2025-06-12T11:05:12.000000Z"
+     *         }
+     *     ],
+     *     "message": "Successfully retrieved 1 accepted trades."
+     * }
+     */
+    public function history(){
+        $userId = Auth::id();
+
+        $trade = $this->tradeService->findAccomplishedTrade($userId);
+
+        return $this->res(200, $trade, "Successfully retrieved " . count($trade) . " accepted trades.");
     }
 }
