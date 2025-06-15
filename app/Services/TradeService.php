@@ -35,7 +35,7 @@ class TradeService
     //find the trade accompolished
     public function findAccomplishedTrade($userId)
     {
-        $trade = Trade::with(['senderPokemon', 'receiverPokemon'])
+        $trade = Trade::with(['sender', 'receiver', 'senderPokemon', 'receiverPokemon'])
             ->where('status', 'accepted')
             ->where(function ($query) use ($userId) {
                 $query->where('sender_id', $userId)
