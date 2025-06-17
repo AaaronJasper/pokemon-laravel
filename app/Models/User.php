@@ -32,6 +32,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Trade::class, 'receiver_id', 'id');
     }
+
+    public function likedPokemons()
+    {
+        return $this->belongsToMany(Pokemon::class, 'pokemon_user_likes')->withTimestamps();
+    }
+
     /**
      * The attributes that are mass assignable.
      *

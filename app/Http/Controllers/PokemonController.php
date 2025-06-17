@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PokemonReuqest;
 use App\Http\Requests\PokemonUpdateRequest;
 use App\Http\Resources\PokemonResource;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Pokemon;
+use App\Models\User;
 use App\Services\PokemonBasicService;
 use App\Services\PokemonService;
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
@@ -32,9 +35,11 @@ class PokemonController extends BaseController
      */
     public function index(Request $request)
     {
+        $user = Auth::guard('sanctum')->user();
+        
         //取得關鍵字
         $query = $request->input('query');
-        $pokemonData = $this->pokemonBasicService->all_pokemon_query($query);
+        $pokemonData = $this->pokemonBasicService->all_pokemon_query($query, $user);
         return $this->res(200, $pokemonData, "search successfully");
     }
 
@@ -74,11 +79,15 @@ class PokemonController extends BaseController
      */
     public function show(string $id)
     {
+        $user = Auth::guard('sanctum')->user();
         //查詢id
         $pokemon = Pokemon::find($id);
         if ($pokemon == null or $pokemon->status == false) {
             return $this->res(404, [], "Pokemon does not exit");
         }
+
+        $likedIds = $user?->likedPokemons()->pluck('pokemon_id')->toArray() ?? [];
+        $pokemon->is_liked = in_array($pokemon->id, $likedIds);
         //返回資料格式
         $pokemonData = new PokemonResource($pokemon);
         return $this->res(200, $pokemonData, "search successfully");

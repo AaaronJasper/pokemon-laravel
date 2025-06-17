@@ -4,7 +4,7 @@ use App\Http\Controllers\AbilityController;
 use App\Http\Controllers\NatureController;
 use App\Http\Controllers\PokemonController;
 use App\Http\Controllers\SkillController;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TradeController;
 use Illuminate\Http\Request;
@@ -40,6 +40,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put("trade/{id}/accept", [TradeController::class, 'accept']);
     Route::put("trade/{id}/reject", [TradeController::class, 'reject']);
     Route::get("trade/history", [TradeController::class, 'history']);
+    //愛心功能
+    Route::post("like", [LikeController::class, 'like']);
+    Route::post("unlike", [LikeController::class, 'unlike']);
 });
 //用戶註冊
 Route::post("user/register", [UserController::class, 'register']);

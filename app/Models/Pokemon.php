@@ -44,5 +44,9 @@ class Pokemon extends Model
     {
         return $this->hasMany(Trade::class, 'receiver_pokemon_id', 'id');
     } 
+    public function likedByUsers()
+    {
+        return $this->belongsToMany(User::class, 'pokemon_user_likes')->withTimestamps();
+    }
 
 }

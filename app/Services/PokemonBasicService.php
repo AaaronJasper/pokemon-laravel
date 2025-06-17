@@ -19,7 +19,7 @@ class PokemonBasicService
         $this->pokemonService = $pokemonService;
     }
 
-    public function all_pokemon_query()
+    public function all_pokemon_query($query, $user)
     {
         //取得可顯示寶可夢
         $pokemonQuery = Pokemon::where('status', true);
@@ -30,17 +30,35 @@ class PokemonBasicService
                     ->orWhere('race', 'like', "%" . $query . '%')
                     ->orWhere('level', 'like', "%" . $query . '%');
             });
-            $pokemon = $pokemonQuery->get();
+            $pokemons = $pokemonQuery->get();
             //無相關寶可夢回傳
-            if (count($pokemon) == 0) {
+            if (count($pokemons) == 0) {
                 return [];
             }
-            $pokemonData = new PokemonCollection($pokemon);
+            
+            $likedIds = $user?->likedPokemons()->pluck('pokemon_id')->toArray() ?? [];
+
+            // 加上 is_liked 欄位（沒有登入的話，全部 false）
+            $pokemons->transform(function ($pokemon) use ($likedIds) {
+                $pokemon->is_liked = in_array($pokemon->id, $likedIds);
+                return $pokemon;
+            });
+
+            $pokemonData = new PokemonCollection($pokemons);
             return $pokemonData;
         } else {
             //無關鍵字回傳所有寶可夢
-            $pokemon = Pokemon::where('status', true)->get();
-            $pokemonData = new PokemonCollection($pokemon);
+            $pokemons = Pokemon::where('status', true)->get();
+
+            $likedIds = $user?->likedPokemons()->pluck('pokemon_id')->toArray() ?? [];
+
+            // 加上 is_liked 欄位（沒有登入的話，全部 false）
+            $pokemons->transform(function ($pokemon) use ($likedIds) {
+                $pokemon->is_liked = in_array($pokemon->id, $likedIds);
+                return $pokemon;
+            });
+
+            $pokemonData = new PokemonCollection($pokemons);
             return $pokemonData;
         }
     }

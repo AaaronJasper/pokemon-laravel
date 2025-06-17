@@ -31,7 +31,8 @@ class PokemonResource extends JsonResource
             "skill4" => $this->skill4,
             "created_at"=>$this->created_at->toDateTimeString(),
             "updated_at"=>$this->updated_at->toDateTimeString(),
-            "image_url" => $this->image_url
+            "image_url" => $this->image_url,
+            'is_liked' => $this->is_liked ?? false,
         ];
     }
 }
