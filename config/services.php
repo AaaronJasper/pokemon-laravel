@@ -36,5 +36,8 @@ return [
         'client_secret' => env('G_CLIENT_SECRET'),
         'redirect' => env('G_REDIRECT'),
     ],
-    
+
+    'openrouter' => [
+        'key' => env('OPENROUTER_API_KEY'),
+    ],
 ];

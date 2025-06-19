@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GeneratePokemonDescriptionRequest;
 use App\Http\Requests\PokemonReuqest;
 use App\Http\Requests\PokemonUpdateRequest;
 use App\Http\Resources\PokemonResource;
@@ -27,7 +28,7 @@ class PokemonController extends BaseController
     {
         $this->pokemonService = $pokemonService;
         $this->pokemonBasicService = $pokemonBasicService;
-        $this->middleware('auth:sanctum')->except(["index", "show", 'get_pokemon_picture']);
+        $this->middleware('auth:sanctum')->except(["index", "show", 'get_pokemon_picture', 'generateDescription']);
     }
 
     /**
@@ -132,5 +133,30 @@ class PokemonController extends BaseController
     {
         $pokemonData = $this->pokemonBasicService->delete_pokemon($id);
         return $this->res($pokemonData[0], $pokemonData[1], $pokemonData[2]);
+    }
+
+    /**
+     * Generate Pokemon description
+     * @response{
+     * "code": 200,
+     * "data": {
+     *      "headers": {},
+     *      "original": {
+     *      "description": "Gengar (No. 1) is a Ghost/Poison-type Pokémon."
+     *       },
+     *     "exception": null
+     * },
+     * "message": "Generate successfully"
+     * }
+     */
+    public function generateDescription(GeneratePokemonDescriptionRequest $request){
+        
+        $response = $this->pokemonService->generatePokemonDescription($request->pokemon_id);
+        
+        if (!$response) {
+            return $this->res(500, "", "Fail to generate");
+        }
+
+        return $this->res(200, $response, "Generate successfully");
     }
 }

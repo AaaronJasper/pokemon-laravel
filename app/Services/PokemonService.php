@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
+use App\Models\Pokemon;
 
 class PokemonService
 {
@@ -48,6 +49,50 @@ class PokemonService
             $chain =  $chain["evolves_to"][0];
         }
         return $race;
+    }
+
+    //生成Pokemon 簡介
+    public function generatePokemonDescription($id){
+        
+        $pokemon = Pokemon::find($id);
+
+        $skills = array_filter([
+            $pokemon->skill1,
+            $pokemon->skill2,
+            $pokemon->skill3,
+            $pokemon->skill4,
+        ]);
+
+        $skillList = $skills ? implode(', ', $skills) : 'no known skills';
+
+        $prompt = "Write a short English Wikipedia-style introduction (max 150 words) for a Pokémon named {$pokemon->name}. 
+                It belongs to the race '{$pokemon->race}' and is currently at level {$pokemon->level}. 
+                Its ability is '{$pokemon->ability}' and its nature is '{$pokemon->nature}'. 
+                It has learned the following skills: {$skillList}.
+                Use an informative and neutral tone, similar to an encyclopedia article.";
+
+        $systemPrompt = "You are an expert Pokémon researcher writing encyclopedia entries in the style of Wikipedia. Keep entries under 150 words.";
+
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer ' . config('services.openrouter.key'),
+            'HTTP-Referer' => 'http://127.0.0.1:3000', 
+            'Content-Type' => 'application/json',
+        ])->post('https://openrouter.ai/api/v1/chat/completions', [
+            'model' => 'openai/gpt-3.5-turbo',
+            'messages' => [
+                ['role' => 'system', 'content' => $systemPrompt],
+                ['role' => 'user', 'content' => $prompt],
+            ],
+            'max_tokens' => 300,
+        ]);
+        
+        $data = $response->json();
+
+        $content = $data['choices'][0]['message']['content'] ?? '';
+
+        return response()->json([
+            'description' => $content,
+        ]);
     }
 }
 

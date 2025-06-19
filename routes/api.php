@@ -44,6 +44,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post("like", [LikeController::class, 'like']);
     Route::post("unlike", [LikeController::class, 'unlike']);
 });
+//AI 生成寶可夢描述
+Route::post('/pokemon/describe', [PokemonController::class, 'generateDescription']);
 //用戶註冊
 Route::post("user/register", [UserController::class, 'register']);
 //用戶登錄
