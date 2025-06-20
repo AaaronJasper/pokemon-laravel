@@ -92,6 +92,7 @@ class SkillController extends BaseController
         }
         //取得登入ID
         $userid = Auth::id();
+        $user = Auth::user();
         //判斷是否是使用者
         if ($pokemon->user_id != $userid) {
             return $this->res(403, [], "Not the pokemon's user");
@@ -147,6 +148,10 @@ class SkillController extends BaseController
         }
         //回傳值
         $pokemon->save();
+
+        $likedIds = $user?->likedPokemons()->pluck('pokemon_id')->toArray() ?? [];
+        $pokemon->is_liked = in_array($pokemon->id, $likedIds);
+
         $pokemonData = new PokemonResource($pokemon);
         return $this->res(201, $pokemonData, "Updated successfully");
     }

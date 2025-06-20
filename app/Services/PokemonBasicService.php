@@ -100,6 +100,7 @@ class PokemonBasicService
         $pokemon = Pokemon::find($id);
         //取得登入ID
         $id = Auth::id();
+        $user = Auth::user();
         //確認是否有寶可夢
         if ($pokemon == null || $pokemon->status == false) {
             return [404, [], "Pokemon does not exit"];
@@ -138,7 +139,12 @@ class PokemonBasicService
         if (!empty($ability)) {
             $pokemon->ability_id = Ability::where("name", $ability)->value("id");
         }
+        
         $pokemon->save();
+
+        $likedIds = $user?->likedPokemons()->pluck('pokemon_id')->toArray() ?? [];
+        $pokemon->is_liked = in_array($pokemon->id, $likedIds);
+        
         $pokemonData = new PokemonResource($pokemon);
         return [200, $pokemonData, "Update completed"];
     }
