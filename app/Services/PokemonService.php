@@ -78,14 +78,14 @@ class PokemonService
             'HTTP-Referer' => 'http://127.0.0.1:3000', 
             'Content-Type' => 'application/json',
         ])->post('https://openrouter.ai/api/v1/chat/completions', [
-            'model' => 'openai/gpt-3.5-turbo',
+            'model' => "openai/gpt-4o",
             'messages' => [
                 ['role' => 'system', 'content' => $systemPrompt],
                 ['role' => 'user', 'content' => $prompt],
             ],
             'max_tokens' => 300,
         ]);
-        
+
         $data = $response->json();
 
         $content = $data['choices'][0]['message']['content'] ?? '';
