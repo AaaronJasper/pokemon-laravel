@@ -32,4 +32,17 @@ class LikeController extends BaseController
 
         return $this->res(200, [], "Unliked successfully");
     }
+
+    public function topLikedPokemons()
+    {
+        $topPokemons = Pokemon::with(['user'])
+            ->withCount('likedByUsers')
+            ->having('liked_by_users_count', '>', 0)
+            ->where('status', true)
+            ->orderByDesc('liked_by_users_count')
+            ->take(7)
+            ->get();
+
+        return $this->res(200, $topPokemons, 'Top liked Pokémon fetched successfully');
+    }
 }
