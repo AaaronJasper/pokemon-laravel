@@ -40,4 +40,8 @@ return [
     'openrouter' => [
         'key' => env('OPENROUTER_API_KEY'),
     ],
+
+    'websocket' => [
+        'url' => env('WEBSOCKET_URL', 'http://localhost:6002'),
+    ],
 ];

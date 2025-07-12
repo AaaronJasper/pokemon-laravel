@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Trade;
+use Illuminate\Support\Facades\Http;
 
 class TradeService
 {
@@ -108,6 +109,19 @@ class TradeService
             $trade->status = 'accepted';
             $trade->save();
         });
+    }
+
+    //use WebSocket send trade notification
+    public function sendTradeNotification($trade, $state){
+        Http::post(config('services.websocket.url') . '/broadcast', [
+            'channel' => "trades.{$trade->sender_id}",
+            'event' => 'TradeStatusUpdated',
+            'data' => [
+                'trade_id' => $trade->id,
+                'trade' => $trade,
+                'status' => $state,
+            ],
+        ]);
     }
 
 }

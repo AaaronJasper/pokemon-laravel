@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\StoreTradeRequest;
 use App\Models\Pokemon;
 use Illuminate\Support\Facades\Auth;
@@ -135,6 +136,8 @@ class TradeController extends BaseController
 
         $this->tradeService->executeTrade($trade);
 
+        $this->tradeService->sendTradeNotification($trade, "completed");
+
         return $this->res(200, $trade, 'Trade completed successfully');
     }
 
@@ -166,6 +169,8 @@ class TradeController extends BaseController
         }
 
         $this->tradeService->rejectTrade($trade);
+
+        $this->tradeService->sendTradeNotification($trade, "rejected");
 
         return $this->res(200, $trade, 'Trade rejected successfully');
     }
