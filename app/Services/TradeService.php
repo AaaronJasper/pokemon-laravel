@@ -111,8 +111,8 @@ class TradeService
         });
     }
 
-    //use WebSocket send trade notification
-    public function sendTradeNotification($trade, $state){
+    //use WebSocket send trade notification to sender
+    public function sendTradeNotificationToSender($trade, $state){
         Http::post(config('services.websocket.url') . '/broadcast', [
             'channel' => "trades.{$trade->sender_id}",
             'event' => 'TradeStatusUpdated',
@@ -120,6 +120,18 @@ class TradeService
                 'trade_id' => $trade->id,
                 'trade' => $trade,
                 'status' => $state,
+            ],
+        ]);
+    }
+
+    //use WebSocket send trade notification to receiver
+    public function sendTradeNotificationToReceiver($trade){
+        Http::post(config('services.websocket.url') . '/broadcast', [
+            'channel' => "trades.{$trade->receiver_id}",
+            'event' => 'TradeStatusUpdated',
+            'data' => [
+                'trade_id' => $trade->id,
+                'trade' => $trade,
             ],
         ]);
     }

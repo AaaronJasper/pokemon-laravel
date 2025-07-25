@@ -70,6 +70,7 @@ class TradeController extends BaseController
         $newTrade = $trade = $this->tradeService->createNewTrade($userId, $senderPokemon, $receiverPokemon);
 
         if ($newTrade){
+            $this->tradeService->sendTradeNotificationToReceiver($trade);
             return $this->res(201, $newTrade, "Initiate trade successfully");
         }
         else{
@@ -136,7 +137,7 @@ class TradeController extends BaseController
 
         $this->tradeService->executeTrade($trade);
 
-        $this->tradeService->sendTradeNotification($trade, "completed");
+        $this->tradeService->sendTradeNotificationToSender($trade, "completed");
 
         return $this->res(200, $trade, 'Trade completed successfully');
     }
@@ -170,7 +171,7 @@ class TradeController extends BaseController
 
         $this->tradeService->rejectTrade($trade);
 
-        $this->tradeService->sendTradeNotification($trade, "rejected");
+        $this->tradeService->sendTradeNotificationToSender($trade, "rejected");
 
         return $this->res(200, $trade, 'Trade rejected successfully');
     }
