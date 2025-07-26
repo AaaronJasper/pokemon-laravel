@@ -80,6 +80,8 @@ class TradeService
         $receiverPokemon->save();
 
         $trade->status = 'rejected';
+        $trade->sender_is_read = true;
+        $trade->receiver_is_read = false;
         $trade->save();
     }
 
@@ -107,6 +109,8 @@ class TradeService
             $receiverPokemon->save();
 
             $trade->status = 'accepted';
+            $trade->sender_is_read = true;
+            $trade->receiver_is_read = false;
             $trade->save();
         });
     }
@@ -132,8 +136,49 @@ class TradeService
             'data' => [
                 'trade_id' => $trade->id,
                 'trade' => $trade,
+                'statue' => $trade->status,
             ],
         ]);
     }
 
+    public function getUnreadNotifications($id)
+    {
+        $senderTrade = Trade::where('sender_id', $id)
+            ->whereIn('status', ['accepted', 'rejected'])
+            ->where('sender_is_read', true)
+            ->first();
+
+        if ($senderTrade) {
+            return [
+                'has_unread' => true,
+                'role' => 'sender',
+                'trade_id' => $senderTrade->id,
+                'trade' => $senderTrade,
+                'status' => $senderTrade->status,
+            ];
+        }
+
+        $receiverTrade = Trade::where('receiver_id', $id)
+            ->where('status', 'pending')
+            ->where('receiver_is_read', true)
+            ->first();
+
+        if ($receiverTrade) {
+            return [
+                'has_unread' => true,
+                'role' => 'receiver',
+                'trade_id' => $receiverTrade->id,
+                'trade' => $receiverTrade,
+                'status' => $receiverTrade->status,
+            ];
+        }
+
+        return [
+            'has_unread' => false,
+            'role' => null,
+            'trade_id' => null,
+            'trade' => null,
+            'status' => null,
+        ];
+    }
 }

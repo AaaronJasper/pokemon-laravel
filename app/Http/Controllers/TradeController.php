@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTradeRequest;
 use App\Models\Pokemon;
+use App\Models\Trade;
 use Illuminate\Support\Facades\Auth;
 use App\Services\TradeService;
 
@@ -102,7 +103,7 @@ class TradeController extends BaseController
         $trade = $this->tradeService->findPendingTrade($userId);
 
         if (!$trade) {
-            return $this->res(404, [], 'No pending trade found');
+            return $this->res(404, [], 'No trade notification found');
         }
 
         return $this->res(200, $trade, '');
@@ -238,5 +239,31 @@ class TradeController extends BaseController
         $trade = $this->tradeService->findAccomplishedTrade($userId);
 
         return $this->res(200, $trade, "Successfully retrieved " . count($trade) . " accepted trades.");
+    }
+
+    public function showUnreadNotifications(){
+        $user = Auth::user();
+
+        $trade = $this->tradeService->getUnreadNotifications($user->id);
+
+        return $this->res(200, $trade, '');
+    }
+
+    public function markAsRead(Trade $trade){
+        
+        $user = Auth::user();
+
+        if ($trade->sender_id === $user->id) {
+            $trade->sender_is_read = false;
+        }
+
+        if ($trade->receiver_id === $user->id) {
+            $trade->receiver_is_read = false;
+        }
+
+        $trade->save();
+
+        return $this->res(200, "", "Marked as read");
+
     }
 }

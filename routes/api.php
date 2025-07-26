@@ -40,6 +40,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put("trade/{id}/accept", [TradeController::class, 'accept']);
     Route::put("trade/{id}/reject", [TradeController::class, 'reject']);
     Route::get("trade/history", [TradeController::class, 'history']);
+    Route::get('trade/unread-notifications', [TradeController::class, 'showUnreadNotifications']);
+    Route::post('trade/{trade}/mark-as-read', [TradeController::class, 'markAsRead']);
+
     //愛心功能
     Route::post("like", [LikeController::class, 'like']);
     Route::post("unlike", [LikeController::class, 'unlike']);
