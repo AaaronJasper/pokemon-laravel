@@ -240,6 +240,33 @@ class TradeController extends BaseController
 
         return $this->res(200, $trade, "Successfully retrieved " . count($trade) . " accepted trades.");
     }
+    
+    /**
+     * Example response when a trade is accepted and the user is the sender
+     * 
+     * @response {
+     *   "code": 200, 
+     *   "data": {
+     *     "has_unread": true,             
+     *     "role": "sender",               
+     *     "trade_id": 152,               
+     *     "trade": {
+     *       "id": 152,                  
+     *       "sender_id": 4,             
+     *       "receiver_id": 5,           
+     *       "sender_pokemon_id": 121,   
+     *       "receiver_pokemon_id": 131,  
+     *       "status": "accepted",        
+     *       "created_at": "2025-07-26T05:07:14.000000Z", 
+     *       "updated_at": "2025-07-26T05:07:33.000000Z", 
+     *       "sender_is_read": 1,       
+     *       "receiver_is_read": 0        
+     *     },
+     *     "status": "accepted"           
+     *   },
+     *   "message": ""                     
+     * }
+     */
 
     public function showUnreadNotifications(){
         $user = Auth::user();
@@ -249,6 +276,15 @@ class TradeController extends BaseController
         return $this->res(200, $trade, '');
     }
 
+    /**
+     * Response when a trade notification is successfully marked as read.
+     * 
+     * @response{
+     *  "code": 200, 
+     *  "data": "",
+     *  "message": "Marked as read",
+     * }
+     */
     public function markAsRead(Trade $trade){
         
         $user = Auth::user();
