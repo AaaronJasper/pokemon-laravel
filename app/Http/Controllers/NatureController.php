@@ -13,6 +13,13 @@ class NatureController extends BaseController
 
     /**
      * Create a nature
+     * 
+     * Allows an authenticated user to create a new nature for Pokémon.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @bodyParam nature string required Example: creative
+     *
      * @response{
      * "code": 201,
      * "data": {
@@ -35,6 +42,14 @@ class NatureController extends BaseController
 
     /**
      * Update a nature
+     * 
+     * Allows an authenticated user to update the name of an existing Pokémon nature.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the nature. Example: 1
+     * @bodyParam nature string required Example: creative
+     * 
      * @response{
      * "code": 200,
      * "data": {

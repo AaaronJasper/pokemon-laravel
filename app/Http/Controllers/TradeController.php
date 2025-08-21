@@ -20,6 +20,15 @@ class TradeController extends BaseController
 
     /**
      * Initiate a trade
+     * 
+     * Allows an authenticated user to propose a trade between two Pokémon.
+     * The trade status will initially be "pending" until accepted or rejected by the receiver.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @bodyParam sender_pokemon_id int required Example: 2
+     * @bodyParam receiver_pokemon_id int required Example: 112
+     * 
      * @response{
      * "code": 201,
      * "data": {
@@ -81,6 +90,14 @@ class TradeController extends BaseController
 
     /**
      * Show a trade
+     * 
+     * Retrieves the pending Pokémon trade for the currently authenticated user, if any. 
+     * Includes sender, receiver, Pokémon involved, and trade status.
+     * Requires authentication.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     *
      * @response{
      *   "code": 200,
      *   "data": {
@@ -111,6 +128,14 @@ class TradeController extends BaseController
 
     /**
      * Accept a trade
+     * 
+     * Accepts a pending Pokémon trade by the authenticated user. 
+     * Updates the trade status to "accepted" and finalizes the exchange of Pokémon.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the Trade. Example: 24
+     * 
      * @response{
      *   "code": 200,
      *   "data": {
@@ -145,6 +170,14 @@ class TradeController extends BaseController
 
     /**
      * Reject a trade
+     * 
+     * Rejects a pending Pokémon trade by the authenticated user. 
+     * Updates the trade status to "rejected" and notifies the sender.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the Trade. Example: 24
+     * 
      * @response{
      *   "code": 200,
      *   "data": {
@@ -179,6 +212,12 @@ class TradeController extends BaseController
 
     /**
      * Show all accepted trades
+     * 
+     * Retrieves a list of all accepted Pokémon trades involving the authenticated user, 
+     * including details of the sender and receiver Pokémon.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
      *
      * @response {
      *     "code": 200,
@@ -242,8 +281,14 @@ class TradeController extends BaseController
     }
     
     /**
-     * Example response when a trade is accepted and the user is the sender
+     * Response when a trade is accepted and the user is the sender
+     *
+     * Retrieves unread notifications related to trades for the authenticated user, 
+     * including the user's role (sender or receiver) and trade details.
      * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     *
      * @response {
      *   "code": 200, 
      *   "data": {
@@ -278,6 +323,13 @@ class TradeController extends BaseController
 
     /**
      * Response when a trade notification is successfully marked as read.
+     * 
+     * * Marks the trade notification as read for the authenticated user, depending on whether 
+     * the user is the sender or receiver.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     *
      * 
      * @response{
      *  "code": 200, 

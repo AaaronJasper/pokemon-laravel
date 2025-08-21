@@ -21,10 +21,20 @@ class UserController extends BaseController
 {
     /**
      * Register a new user
-     * @response{
-     * "code": 201,
-     * "data": "5|DZTNk2mBYpPkew2cxuHJFYmmOXF5nE7yjNyIfjKL",
-     * "message": "Register success"
+     * 
+     * @bodyParam name string required Must be at least 1 character and at most 16 characters. Example: zzzz
+     * @bodyParam email string required Must be a valid email and unique. Example: z@z.com
+     * @bodyParam password string required Must be at least 4 characters and at most 16 characters. Example: zzzz
+     * @bodyParam password_confirmation string required Must match the password. Example: zzzz
+     * 
+     * @response {
+     *   "code": 201,
+     *   "data": {
+     *     "id": 191,
+     *     "user": "zzzz",
+     *     "token": "196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC"
+     *   },
+     *   "message": "Register success"
      * }
      */
     public function register(RegisterRequest $request)
@@ -47,12 +57,22 @@ class UserController extends BaseController
         //$data[] = ["token" => $token];
         return $this->res(201, ['id' => $user->id, 'user' => $user->name, 'token' => $token], "Register success");
     }
+
     /**
-     * Login 
-     * @response{
-     * "code": 200,
-     * "data": "2|JgAcW87DjmPYIX2uyFhdATblRGWYnqODmEGLGe5q",
-     * "message": "Login success"
+     * Login
+     * 
+     * @bodyParam email string required Must be a valid email of an existing user. Example: z@z.com
+     * @bodyParam password string required Must be at least 4 characters and at most 16 characters. Example: zzzz
+     * 
+     * @response {
+     *   "code": 200,
+     *   "data": {
+     *     "id": 191,
+     *     "user": "pepe99",
+     *     "token": "197|9gZJvthvy25irafpoaANdyOJYkugFeAB6yZTUgU4",
+     *     "isVerify": false
+     *   },
+     *   "message": "Login success"
      * }
      */
     public function login(LoginRequest $request)
@@ -74,13 +94,18 @@ class UserController extends BaseController
             return $this->res(401, $data, "Login failed");
         }
     }
+
     /**
      * Logout
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * 
      * @response{
      * "code": 200,
      * "data": {
-     *     "name": "rick",
-     *     "email": "a@a.com"
+     *     "name": "zzzz",
+     *     "email": "z@z.com"
      * },
      * "message": "Logout success"
      * }
@@ -96,7 +121,26 @@ class UserController extends BaseController
         return $this->res(200, $data, "Logout success");
     }
     /**
-     * Get user information
+     * Exchange code for API token
+     * 
+     * This endpoint allows a client to exchange a temporary OAuth code for a personal access token.
+     *
+     * @bodyParam code string required The temporary OAuth code received from the authentication flow. Example: abc123
+     * 
+     * @response 200 {
+     *   "code": 200,
+     *   "data": {
+     *     "id": 191,
+     *     "user": "pepe99",
+     *     "token": "196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC",
+     *     "isVerify": false
+     *   },
+     *   "message": "Login success"
+     * }
+     * 
+     * @response 400 {
+     *   "message": "Invalid or expired code"
+     * }
      */
     public function exchange_token(Request $request)
     {
@@ -113,6 +157,10 @@ class UserController extends BaseController
     }
     /**
      * Resend verification email
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * 
      * @response{
      * "code": 200,
      * "data": {
@@ -160,6 +208,7 @@ class UserController extends BaseController
     }
     /**
      * Send password reset email 
+     * 
      * @response{
      * "code": 200,
      * "data": [],
@@ -188,11 +237,20 @@ class UserController extends BaseController
     }
     /**
      * Reset password
-     * @response{
-     * "code": 200,
-     * "data": [],
-     * "message": "Update password success"
+     * 
+     * This endpoint allows a user to reset their password using a valid reset token.
+     *
+     * @urlParam token string required The password reset token sent to the user's email. Example: abc123token
+     * @bodyParam email string required The email of the user. Must exist in the system. Example: pepe99@example.com
+     * @bodyParam password string required The new password. Must be 4-16 characters and match password_confirmation. Example: newpass123
+     * @bodyParam password_confirmation string required Must match the password. Example: newpass123
+     * 
+     * @response 200 {
+     *   "code": 200,
+     *   "data": [],
+     *   "message": "Update password success"
      * }
+     * 
      */
     public function reset_password(Request $request)
     {

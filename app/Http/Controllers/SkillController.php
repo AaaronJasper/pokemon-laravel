@@ -13,6 +13,56 @@ class SkillController extends BaseController
 {
     /**
      * Show learnable skills
+     *
+     * Display all the skills that the given Pokemon can learn.
+     *
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the Pokemon. Example: 132
+     *
+     * @response 200 [
+     *   "slam",
+     *   "sand-attack",
+     *   "headbutt",
+     *   "wrap",
+     *   "take-down",
+     *   "water-gun",
+     *   "hydro-pump",
+     *   "surf",
+     *   "ice-beam",
+     *   "blizzard",
+     *   "hyper-beam",
+     *   "dig",
+     *   "agility",
+     *   "swift",
+     *   "rest",
+     *   "substitute",
+     *   "protect",
+     *   "mud-slap",
+     *   "sandstorm",
+     *   "endure",
+     *   "sleep-talk",
+     *   "pain-split",
+     *   "rain-dance",
+     *   "whirlpool",
+     *   "facade",
+     *   "helping-hand",
+     *   "muddy-water",
+     *   "mud-shot",
+     *   "water-pulse",
+     *   "sucker-punch",
+     *   "earth-power",
+     *   "giga-impact",
+     *   "aqua-jet",
+     *   "foul-play",
+     *   "bulldoze",
+     *   "throat-chop",
+     *   "stomping-tantrum",
+     *   "liquidation",
+     *   "tera-blast",
+     *   "triple-dive",
+     *   "chilling-water"
+     * ]
      */
     public function index(string $id)
     {
@@ -42,6 +92,23 @@ class SkillController extends BaseController
 
     /**
      * Show learned skills
+     *
+     * Display the list of skills that a given Pokemon has learned.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the Pokemon. Example: 132
+     *
+     * @response {
+     *   "code": 200,
+     *   "data": {
+     *     "skill1": "slam",
+     *     "skill2": "sand-attack",
+     *     "skill3": "headbutt",
+     *     "skill4": "wrap"
+     *   },
+     *   "message": "Search successful"
+     * }
      */
     public function show(string $id)
     {
@@ -65,6 +132,18 @@ class SkillController extends BaseController
 
     /**
      * Learn skills
+     * 
+     * Allows an authenticated user to update the skills of a specific Pokémon.
+     * Skills are optional; only provide the ones you want to update.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the Pokemon. Example: 2
+     * @bodyParam skill1 string optional Example: transform
+     * @bodyParam skill2 string optional Example: null
+     * @bodyParam skill3 string optional Example: null
+     * @bodyParam skill4 string optional Example: null
+     * 
      * @response{
      * "code": 201,
      * "data": {

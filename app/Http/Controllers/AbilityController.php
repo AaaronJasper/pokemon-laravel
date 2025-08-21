@@ -13,6 +13,13 @@ class AbilityController extends BaseController
     
     /**
      * Create an ability
+     * 
+     * Allows an authenticated user to create a new ability for Pokémon.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @bodyParam ability string required Example: creative
+     * 
      * @response {
      * "code": 201,
      * "data": {
@@ -34,7 +41,15 @@ class AbilityController extends BaseController
     }
 
     /**
-     * update an ability
+     * Update an ability
+     * 
+     * Allows an authenticated user to update the name of an existing Pokémon ability.
+     * 
+     * @authenticated
+     * @header Authorization Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC
+     * @urlParam id int required The ID of the ability. Example: 1
+     * @bodyParam ability string required Example: patient
+     * 
      * @response{
      * "code": 200,
      * "data": {
