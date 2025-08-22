@@ -155,10 +155,10 @@ endpoints:
               "race": "wugtrio",
               "nature": "creative",
               "ability": "versatile",
-              "skill1": "slam",
-              "skill2": "sand-attack",
-              "skill3": "headbutt",
-              "skill4": "wrap",
+              "skill1": null,
+              "skill2": null,
+              "skill3": null,
+              "skill4": null,
               "created_at": "2023-09-20 09:24:18",
               "updated_at": "2023-09-20 09:24:18",
               "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/961.png",
@@ -1297,7 +1297,7 @@ endpoints:
       subgroupDescription: ''
       title: 'Response when a trade notification is successfully marked as read.'
       description: |-
-        * Marks the trade notification as read for the authenticated user, depending on whether
+        Marks the trade notification as read for the authenticated user, depending on whether
         the user is the sender or receiver.
       authenticated: true
       custom: []
@@ -1310,12 +1310,12 @@ endpoints:
         name: trade_id
         description: 'The ID of the trade.'
         required: true
-        example: 19
+        example: 16
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      trade_id: 19
+      trade_id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1921,12 +1921,12 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: enim
+        example: maxime
         type: string
         enumValues: []
         custom: []
     cleanUrlParameters:
-      token: enim
+      token: maxime
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1975,12 +1975,12 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: keven.lesch@example.net
+        example: carleton.moen@example.com
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      email: keven.lesch@example.net
+      email: carleton.moen@example.com
     fileParameters: []
     responses:
       -
@@ -2058,7 +2058,7 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: aut
+        example: veniam
         type: string
         enumValues: []
         custom: []
@@ -2066,7 +2066,7 @@ endpoints:
       email: pepe99@example.com
       password: newpass123
       password_confirmation: newpass123
-      token: aut
+      token: veniam
     fileParameters: []
     responses:
       -

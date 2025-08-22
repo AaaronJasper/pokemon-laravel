@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "d162dab4-d253-4a9d-b9f4-72c5889ca673",
+        "_postman_id": "fefd6974-198e-4a56-a77f-babee05e04e3",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -92,7 +92,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"id\": 5,\n    \"name\": \"pepe99\",\n    \"level\": \"1\",\n    \"race\": \"wugtrio\",\n    \"nature\": \"creative\",\n    \"ability\": \"versatile\",\n    \"skill1\": \"slam\",\n    \"skill2\": \"sand-attack\",\n    \"skill3\": \"headbutt\",\n    \"skill4\": \"wrap\",\n    \"created_at\": \"2023-09-20 09:24:18\",\n    \"updated_at\": \"2023-09-20 09:24:18\",\n    \"image_url\": \"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/961.png\",\n    \"is_liked\": false\n},\n\"message\": \"Created successfully\"\n}",
+                            "body": "{\n\"code\": 201,\n\"data\": {\n    \"id\": 5,\n    \"name\": \"pepe99\",\n    \"level\": \"1\",\n    \"race\": \"wugtrio\",\n    \"nature\": \"creative\",\n    \"ability\": \"versatile\",\n    \"skill1\": null,\n    \"skill2\": null,\n    \"skill3\": null,\n    \"skill4\": null,\n    \"created_at\": \"2023-09-20 09:24:18\",\n    \"updated_at\": \"2023-09-20 09:24:18\",\n    \"image_url\": \"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/961.png\",\n    \"is_liked\": false\n},\n\"message\": \"Created successfully\"\n}",
                             "name": ""
                         }
                     ]
@@ -785,7 +785,7 @@
                                 {
                                     "id": "trade_id",
                                     "key": "trade_id",
-                                    "value": "19",
+                                    "value": "16",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -806,7 +806,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "* Marks the trade notification as read for the authenticated user, depending on whether\nthe user is the sender or receiver."
+                        "description": "Marks the trade notification as read for the authenticated user, depending on whether\nthe user is the sender or receiver."
                     },
                     "response": [
                         {
@@ -1172,7 +1172,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "enim",
+                                    "value": "maxime",
                                     "description": ""
                                 }
                             ]
@@ -1225,7 +1225,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"keven.lesch@example.net\"}"
+                            "raw": "{\"email\":\"carleton.moen@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1271,7 +1271,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"pepe99@example.com\",\"password\":\"newpass123\",\"password_confirmation\":\"newpass123\",\"token\":\"aut\"}"
+                            "raw": "{\"email\":\"pepe99@example.com\",\"password\":\"newpass123\",\"password_confirmation\":\"newpass123\",\"token\":\"veniam\"}"
                         },
                         "description": "This endpoint allows a user to reset their password using a valid reset token.",
                         "auth": {

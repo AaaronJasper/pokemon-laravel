@@ -167,10 +167,10 @@ paths:
                     race: wugtrio
                     nature: creative
                     ability: versatile
-                    skill1: slam
-                    skill2: sand-attack
-                    skill3: headbutt
-                    skill4: wrap
+                    skill1: null
+                    skill2: null
+                    skill3: null
+                    skill4: null
                     created_at: '2023-09-20 09:24:18'
                     updated_at: '2023-09-20 09:24:18'
                     image_url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/961.png'
@@ -203,16 +203,16 @@ paths:
                         example: versatile
                       skill1:
                         type: string
-                        example: slam
+                        example: null
                       skill2:
                         type: string
-                        example: sand-attack
+                        example: null
                       skill3:
                         type: string
-                        example: headbutt
+                        example: null
                       skill4:
                         type: string
-                        example: wrap
+                        example: null
                       created_at:
                         type: string
                         example: '2023-09-20 09:24:18'
@@ -1528,7 +1528,7 @@ paths:
     post:
       summary: 'Response when a trade notification is successfully marked as read.'
       operationId: responseWhenATradeNotificationIsSuccessfullyMarkedAsRead
-      description: "* Marks the trade notification as read for the authenticated user, depending on whether\nthe user is the sender or receiver."
+      description: "Marks the trade notification as read for the authenticated user, depending on whether\nthe user is the sender or receiver."
       parameters: []
       responses:
         200:
@@ -1545,7 +1545,7 @@ paths:
         in: path
         name: trade_id
         description: 'The ID of the trade.'
-        example: 19
+        example: 16
         required: true
         schema:
           type: integer
@@ -2239,7 +2239,7 @@ paths:
         in: path
         name: token
         description: ''
-        example: enim
+        example: maxime
         required: true
         schema:
           type: string
@@ -2282,7 +2282,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: keven.lesch@example.net
+                  example: carleton.moen@example.com
               required:
                 - email
       security: []
@@ -2337,7 +2337,7 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: aut
+                  example: veniam
               required:
                 - email
                 - password

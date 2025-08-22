@@ -324,7 +324,7 @@ class TradeController extends BaseController
     /**
      * Response when a trade notification is successfully marked as read.
      * 
-     * * Marks the trade notification as read for the authenticated user, depending on whether 
+     * Marks the trade notification as read for the authenticated user, depending on whether 
      * the user is the sender or receiver.
      * 
      * @authenticated

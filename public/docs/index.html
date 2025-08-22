@@ -181,7 +181,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 21, 2025</li>
+        <li>Last updated: August 22, 2025</li>
     </ul>
 </div>
 
@@ -439,10 +439,10 @@ fetch(url, {
         &quot;race&quot;: &quot;wugtrio&quot;,
         &quot;nature&quot;: &quot;creative&quot;,
         &quot;ability&quot;: &quot;versatile&quot;,
-        &quot;skill1&quot;: &quot;slam&quot;,
-        &quot;skill2&quot;: &quot;sand-attack&quot;,
-        &quot;skill3&quot;: &quot;headbutt&quot;,
-        &quot;skill4&quot;: &quot;wrap&quot;,
+        &quot;skill1&quot;: null,
+        &quot;skill2&quot;: null,
+        &quot;skill3&quot;: null,
+        &quot;skill4&quot;: null,
         &quot;created_at&quot;: &quot;2023-09-20 09:24:18&quot;,
         &quot;updated_at&quot;: &quot;2023-09-20 09:24:18&quot;,
         &quot;image_url&quot;: &quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/961.png&quot;,
@@ -3283,10 +3283,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small class="badge badge-darkred">requires authentication</small>
 </p>
 
-<ul>
-<li>Marks the trade notification as read for the authenticated user, depending on whether
-the user is the sender or receiver.</li>
-</ul>
+<p>Marks the trade notification as read for the authenticated user, depending on whether
+the user is the sender or receiver.</p>
 
 <span id="example-requests-POSTapi-trade--trade_id--mark-as-read">
 <blockquote>Example request:</blockquote>
@@ -3294,7 +3292,7 @@ the user is the sender or receiver.</li>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/trade/19/mark-as-read" \
+    "http://127.0.0.1:8000/api/trade/16/mark-as-read" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer {token} Example: Bearer 196|wQr6eQ7dvE2cjGyztjIWJeGqCWa0GhVSON2Z7EcC"</code></pre></div>
@@ -3302,7 +3300,7 @@ the user is the sender or receiver.</li>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/trade/19/mark-as-read"
+    "http://127.0.0.1:8000/api/trade/16/mark-as-read"
 );
 
 const headers = {
@@ -3418,10 +3416,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="trade_id"                data-endpoint="POSTapi-trade--trade_id--mark-as-read"
-               value="19"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the trade. Example: <code>19</code></p>
+<p>The ID of the trade. Example: <code>16</code></p>
             </div>
                     </form>
 
@@ -4841,14 +4839,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/verify/enim" \
+    --get "http://127.0.0.1:8000/api/verify/maxime" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/verify/enim"
+    "http://127.0.0.1:8000/api/verify/maxime"
 );
 
 const headers = {
@@ -4952,10 +4950,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="GETapi-verify--token-"
-               value="enim"
+               value="maxime"
                data-component="url">
     <br>
-<p>Example: <code>enim</code></p>
+<p>Example: <code>maxime</code></p>
             </div>
                     </form>
 
@@ -4976,7 +4974,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"keven.lesch@example.net\"
+    \"email\": \"carleton.moen@example.com\"
 }"
 </code></pre></div>
 
@@ -4992,7 +4990,7 @@ const headers = {
 };
 
 let body = {
-    "email": "keven.lesch@example.net"
+    "email": "carleton.moen@example.com"
 };
 
 fetch(url, {
@@ -5092,10 +5090,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-forget_password"
-               value="keven.lesch@example.net"
+               value="carleton.moen@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>keven.lesch@example.net</code></p>
+<p>Must be a valid email address. Example: <code>carleton.moen@example.com</code></p>
         </div>
         </form>
 
@@ -5119,7 +5117,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"email\": \"pepe99@example.com\",
     \"password\": \"newpass123\",
     \"password_confirmation\": \"newpass123\",
-    \"token\": \"aut\"
+    \"token\": \"veniam\"
 }"
 </code></pre></div>
 
@@ -5138,7 +5136,7 @@ let body = {
     "email": "pepe99@example.com",
     "password": "newpass123",
     "password_confirmation": "newpass123",
-    "token": "aut"
+    "token": "veniam"
 };
 
 fetch(url, {
@@ -5283,10 +5281,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-reset_password--token-"
-               value="aut"
+               value="veniam"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>veniam</code></p>
         </div>
         </form>
 
