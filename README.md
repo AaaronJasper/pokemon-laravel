@@ -19,7 +19,7 @@ A Pokémon management backend built with Laravel, providing APIs for Pokémon da
 -   **Backend**: Laravel 10.0.3
 -   **Database**: MySQL
 -   **Authentication**: Laravel Sanctum (Bearer tokens)
--   **API**: Custom RESTful endpoints
+-   **API**: Custom RESTful endpoints, GraphQL endpoints
 
 ---
 
