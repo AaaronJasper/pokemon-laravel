@@ -23,60 +23,102 @@ use Illuminate\Support\Facades\Route;
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //});
+
+// Resource routes for Pokemon, using API middleware
+// exclude "edit" and "create" which are for web forms
 Route::middleware('api')->resource('pokemon', PokemonController::class)->except("edit", "create");
-//需登入路由
+
+// Routes that require authentication
 Route::middleware('auth:sanctum')->group(function () {
-    //性格
+    // Nature (性格)
+    // Nature management routes (update, store)
     Route::resource("nature", NatureController::class)->only('update', 'store');
-    //特性
+
+    // Ability (特性)
+    // Ability management routes (update, store)
     Route::resource("ability", AbilityController::class)->only('update', 'store');
-    //技能
+
+    // Skills (技能)
+    // Get all enabled skills for a Pokemon
     Route::get("pokemon/{id}/enableSkill", [SkillController::class, 'index']);
+    // Get learned skills of a Pokemon
     Route::get("pokemon/{id}/skill", [SkillController::class, 'show']);
+    // Teach a skill to a Pokemon
     Route::post("pokemon/{id}/skill", [SkillController::class, 'learn']);
-    //交易
+
+    // Trades (交易)
+    // Create a trade
     Route::post("trade", [TradeController::class, 'store']);
+    // Show trades
     Route::get("trade", [TradeController::class, 'show']);
+    // Accept a trade
     Route::put("trade/{id}/accept", [TradeController::class, 'accept']);
+    // Reject a trade
     Route::put("trade/{id}/reject", [TradeController::class, 'reject']);
+    // Show trade history
     Route::get("trade/history", [TradeController::class, 'history']);
+    // Show unread trade notifications
     Route::get('trade/unread-notifications', [TradeController::class, 'showUnreadNotifications']);
+    // Mark a trade notification as read
     Route::post('trade/{trade}/mark-as-read', [TradeController::class, 'markAsRead']);
 
-    //愛心功能
+    // Like functionality (愛心功能)
+    // Like a Pokemon
     Route::post("like", [LikeController::class, 'like']);
+    // Unlike a Pokemon
     Route::post("unlike", [LikeController::class, 'unlike']);
 });
+
+// Top liked Pokemons ranking
+// Return top liked Pokemons
 Route::get('/ranking/top-liked', [LikeController::class, 'topLikedPokemons']);
-//AI 生成寶可夢描述
+
+// AI-generated Pokemon description
+// Generate a Pokemon description using AI
 Route::post('/pokemon/describe', [PokemonController::class, 'generateDescription']);
-//用戶註冊
+
+// User registration
+// Register a new user
 Route::post("user/register", [UserController::class, 'register']);
-//用戶登錄
+
+// User login
 Route::post("user/login", [UserController::class, 'login']);
-//拿到 OAuth 登入 user資料
+
+// Get OAuth login user information
+// Exchange OAuth token to get user info
 Route::post('oauth/exchange-token', [UserController::class, "exchange_token"]);
-//需登入路由
+
+// Routes that require authentication
 Route::middleware('auth:sanctum')->group(function () {
-    //用戶登出
+    // User logout
     Route::delete("user/logout", [UserController::class, 'logout']);
-    //再次發送驗證
+    // Resend verification email
     Route::post('/send_verify', [UserController::class, "send_verify"]);
 });
-//驗證信箱
+
+// Email verification
 Route::get("/verify/{token}", [UserController::class, "verify"])->name("verify");
-//寄送忘記密碼郵件
+
+// Send forgot password email
 Route::post('/forget_password', [UserController::class, "forget_password"]);
-//重設密碼
+
+// Reset user password using token
 Route::post("/reset_password/{token}", [UserController::class, "reset_password"])->name("reset_password");
+
 //google登入(需用web中間件才能讓套件產生作用)
 //也可以直接加在web.php
+// Google login (requires 'web' middleware to work properly)
+// OAuth Google login routes
 Route::group(['middleware' => ['web']], function () {
     Route::get('/auth/google', [\App\Http\Controllers\SocialiteController::class, 'googleLogin'])->name('/auth/google');
     Route::get('/auth/google/callback', [\App\Http\Controllers\SocialiteController::class, 'googleLoginCallback'])->name('/auth/google/callback');
 });
+
 //回傳未登入(讓middleware轉址)
+// Return not logged-in response (for middleware redirection)
+// Return notLogin response if user is not authenticated
 Route::get('notLogin', [UserController::class, 'notLogin'])->name("notLogin");
 
-//測試
+// Testing route
+// English: Test route (commented out)
 //Route::get('test', [TestController::class, 'test'])->name("test");
